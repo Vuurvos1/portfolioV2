@@ -14,11 +14,30 @@ body {
 }
 
 li {
-    list-style: none; 
+    list-style: none;
 }
 
 a {
     text-decoration: none;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar-track {
+    box-shadow: none;
+    background-color: white;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: gray;
 }
 
 
@@ -27,12 +46,8 @@ Header
 */
 header {
     z-index: 3;
-
     position: fixed;
-    /* top: 0; */
-
     transition: top .3s ease-in-out;
-
     background-color: white;
 }
 
@@ -76,17 +91,6 @@ nav ul a {
     font-weight: bold;
 }
 
-
-/*
-nav ul li:nth-child(odd) {
-    background-color: orange;
-}
-
-nav ul li:nth-child(even) {
-    background-color: yellow;
-}
-*/
-
 #burgerMenu {
     display: flex;
     flex-direction: row;
@@ -108,7 +112,7 @@ nav ul li:nth-child(even) {
     transition: all .25s ease-in-out;
 }
 
-.menuActive ul li{
+.menuActive ul li {
     transform: translateX(0);
 }
 
@@ -120,8 +124,10 @@ main {
     width: 100%;
     height: auto;
     min-height: 100vh;
-    margin-bottom: 5rem; /*Zelfde als footer hoog is*/
+    margin-bottom: 5rem;
+    /*Zelfde als footer hoog is*/
     background-color: white;
+    margin-top: 3.4rem;
 }
 
 /* Home */
@@ -160,7 +166,7 @@ article div {
     left: 50%;
     transform: translate(-50%, -50%);
     opacity: 0;
-    transition: .3s;
+    transition: ease-out .3s;
 }
 
 article p {
@@ -240,7 +246,7 @@ Responsive
 
     main ul {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, calc(100vw / 3));
     }
 
     main ul li {
