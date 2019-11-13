@@ -8,10 +8,13 @@
 
 body {
     --yeet: 1;
+
+    max-width: 100vw;
+    overflow-x: hidden;
 }
 
 li {
-    list-style: none;
+    list-style: none; 
 }
 
 a {
@@ -24,30 +27,90 @@ Header
 */
 header {
     z-index: 3;
+
+    position: fixed;
+    /* top: 0; */
+
+    transition: top .3s ease-in-out;
+
+    background-color: white;
+}
+
+nav {
+    width: 100vw;
+    max-width: 100vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    height: 3.4rem;
+    z-index: 3;
 }
 
 nav ul {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+
+    top: 3.4rem;
+    right: 0;
+    z-index: 3;
+    position: absolute;
+    overflow: hidden;
+    margin-top: -1px;
 }
+
+nav ul li {
+    padding: 1em 1.4rem 1em 1em;
+    width: 10rem;
+    text-align: right;
+    z-index: 3;
+    transition: all ease-out .3s;
+    transform: translateX(100%);
+
+    margin-top: -1px;
+    background-color: white;
+}
+
+nav ul a {
+    color: black;
+    font-weight: bold;
+}
+
+
+/*
+nav ul li:nth-child(odd) {
+    background-color: orange;
+}
+
+nav ul li:nth-child(even) {
+    background-color: yellow;
+}
+*/
 
 #burgerMenu {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    font-size: 1rem;
+    color: black;
+    font-weight: bold;
+    margin-right: 1.2rem;
 }
 
 #burgerMenu svg {
     height: 1.2rem;
     width: auto;
 
-    margin-left: .4rem;
+    margin-left: .8rem;
 }
 
 #burgerMenu rect {
     transition: all .25s ease-in-out;
 }
 
+.menuActive ul li{
+    transform: translateX(0);
+}
 
 
 /*
@@ -57,9 +120,7 @@ main {
     width: 100%;
     height: auto;
     min-height: 100vh;
-    margin-bottom: 5rem;
-    /*Zelfde als footer hoog is*/
-
+    margin-bottom: 5rem; /*Zelfde als footer hoog is*/
     background-color: white;
 }
 
@@ -107,13 +168,15 @@ article p {
 }
 
 
-article:hover div {
+article:hover div,
+article:focus div {
     opacity: 1;
-  }
-  
-  article:hover img {
+}
+
+article:hover img,
+article:focus img {
     opacity: .4;
-  }
+}
 
 
 /* Projecten */
@@ -156,6 +219,25 @@ Responsive
 
 /* Desktop */
 @media screen and (min-width: 1024px) {
+    #burgerMenu {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: row;
+        position: relative;
+        top: 0;
+        right: 0;
+    }
+
+    nav ul li {
+        background-color: none;
+        width: auto;
+        transform: translateX(0);
+
+        background-color: #fff;
+    }
+
     main ul {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
