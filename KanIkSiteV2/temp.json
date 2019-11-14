@@ -1,0 +1,40 @@
+{
+    "coord": {
+        "lon": 4.75,
+        "lat": 51.56
+    },
+    "weather": [{
+        "id": 804,
+        "main": "Clouds",
+        "description": "overcast clouds",
+        "icon": "04n"
+    }],
+    "base": "stations",
+    "main": {
+        "temp": 7.13,
+        "pressure": 1020,
+        "humidity": 75,
+        "temp_min": 5,
+        "temp_max": 9
+    },
+    "visibility": 10000,
+    "wind": {
+        "speed": 2.6,
+        "deg": 250
+    },
+    "clouds": {
+        "all": 90
+    },
+    "dt": 1550600040,
+    "sys": {
+        "type": 1,
+        "id": 1531,
+        "message": 0.0043,
+        "country": "NL",
+        "sunrise": 1550558778,
+        "sunset": 1550595844
+    },
+    "id": 2758400,
+    "name": "Gemeente Breda",
+    "cod": 200
+}

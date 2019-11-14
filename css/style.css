@@ -7,10 +7,22 @@
 }
 
 body {
+    /* kleuren */
+    --textCol: #0a0a0a;
+    --textCol2:#f0f0f0;
+    --bgCol: #ffffff;
+    --bgCol2: #252c2e;
+    --accentCol: #018ed7;
+
+
+    /* overig */
     --yeet: 1;
+    --col: 1;
 
     max-width: 100vw;
     overflow-x: hidden;
+
+
 }
 
 li {
@@ -87,7 +99,7 @@ nav ul li {
 }
 
 nav ul a {
-    color: black;
+    color: var(--textCol);
     font-weight: bold;
 }
 
@@ -124,7 +136,7 @@ main {
     width: 100%;
     height: auto;
     min-height: 100vh;
-    margin-bottom: 5rem;
+    margin-bottom: 14rem;
     /*Zelfde als footer hoog is*/
     background-color: white;
     margin-top: 3.4rem;
@@ -170,7 +182,7 @@ article div {
 }
 
 article p {
-    color: white;
+    color: var(--textCol2);
 }
 
 
@@ -202,9 +214,11 @@ footer {
     bottom: 0;
     z-index: -1;
 
+    padding: 3rem 2rem;
+
     min-height: 5rem;
-    background-color: darkgray;
-    color: black;
+    background-color: var(--bgCol2);
+    color: var(--textCol2);
     width: 100%;
 }
 
@@ -213,9 +227,20 @@ footer {
     flex-direction: row;
 }
 
+footer a {
+    color: var(--textCol2);
+}
+
+footer svg {
+    fill: var(--textCol2);
+    height: 2rem;
+    width: auto;
+}
+
 .footerSocial li {
     margin-right: .6em;
 }
+
 
 /*
 Responsive
