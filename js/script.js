@@ -6,15 +6,14 @@ document.querySelector('#burgerMenu').addEventListener('click', function () {
 //hide nav on scroll
 let prevScroll = window.pageYOffset;
 window.onscroll = function() {
-    let currentScroll = window.pageYOffset;
-    if (currentScroll > 75 && !document.querySelector('nav').classList.contains('menuActive')) {
-        if (prevScroll > currentScroll) {
+    if (window.pageYOffset > 75 && !document.querySelector('nav').classList.contains('menuActive')) {
+        if (prevScroll > window.pageYOffset) {
             document.querySelector('header').style.top = '0';
         } else {
             document.querySelector('header').style.top = '-4rem';
         }
     }
-    prevScroll = currentScroll;
+    prevScroll = window.pageYOffset;
 }
 
 

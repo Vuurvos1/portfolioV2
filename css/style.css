@@ -40,7 +40,6 @@ a {
     background: gray;
 }
 
-
 /*
 Header
 */
@@ -49,6 +48,7 @@ header {
     position: fixed;
     transition: top .3s ease-in-out;
     background-color: white;
+    top: 0;
 }
 
 nav {
@@ -162,9 +162,9 @@ article h3 {
 
 article div {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 40%;
+    left: 40%;
+    transform: translate(-32%, -25%);
     opacity: 0;
     transition: ease-out .3s;
 }
@@ -175,12 +175,14 @@ article p {
 
 
 article:hover div,
-article:focus div {
+article:focus div,
+main li a:focus div {
     opacity: 1;
 }
 
 article:hover img,
-article:focus img {
+article:focus img, 
+main li a:focus img {
     opacity: .4;
 }
 
@@ -206,6 +208,14 @@ footer {
     width: 100%;
 }
 
+.footerSocial {
+    display: flex;
+    flex-direction: row;
+}
+
+.footerSocial li {
+    margin-right: .6em;
+}
 
 /*
 Responsive
