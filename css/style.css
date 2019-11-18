@@ -4,6 +4,8 @@
 
     scroll-behavior: smooth;
     font-family: 'Open Sans', sans-serif;
+
+    --footerHeight: 8rem;
 }
 
 body {
@@ -136,8 +138,7 @@ main {
     width: 100%;
     height: auto;
     min-height: 100vh;
-    margin-bottom: 14rem;
-    /*Zelfde als footer hoog is*/
+    margin-bottom: var(--footerHeight);
     background-color: white;
     margin-top: 3.4rem;
 }
@@ -214,12 +215,13 @@ footer {
     bottom: 0;
     z-index: -1;
 
-    padding: 3rem 2rem;
+    box-sizing: border-box;
+    padding: 2rem 3rem 1rem 3rem;
 
-    min-height: 5rem;
+    height: var(--footerHeight);
     background-color: var(--bgCol2);
     color: var(--textCol2);
-    width: 100%;
+    width: 100vw;
 }
 
 .footerSocial {
@@ -239,6 +241,19 @@ footer svg {
 
 .footerSocial li {
     margin-right: .6em;
+}
+
+footer div:first-child {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.copy {
+    margin-top: 1.2rem;
+    color: darkgray;
+    text-align: center;
+    font-size: .8rem;
 }
 
 
