@@ -199,6 +199,22 @@ main li a:focus img {
     opacity: .4;
 }
 
+.underlineLink {
+    text-decoration: underline;
+    color: var(--textCol2);
+    transition: all .2 ease-out;
+}
+
+.underlineLink:hover {
+    text-decoration: underline;
+    color: lightgray;
+}
+
+
+.flexCol {
+    display: flex;
+    flex-direction: column;
+}
 
 /* Projecten */
 
@@ -239,6 +255,10 @@ footer svg {
     width: auto;
 }
 
+footer svg path {
+    fill: var(--textCol2);
+}
+
 .footerSocial li {
     margin-right: .6em;
 }
@@ -255,7 +275,6 @@ footer div:first-child {
     text-align: center;
     font-size: .8rem;
 }
-
 
 /*
 Responsive
