@@ -35,6 +35,21 @@ a {
     text-decoration: none;
 }
 
+.underline:visited {
+    color: var(--textCol2);
+}
+
+.underline {
+    text-decoration: underline;
+    color: var(--textCol2);
+    transition: all .2 ease-out;
+}
+
+.underline:hover {
+    text-decoration: underline;
+    color: lightgray;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar-track {
     box-shadow: none;
@@ -196,17 +211,6 @@ main ul li {
 #main article:focus img, 
 #main li a:focus img {
     opacity: .4;
-}
-
-.underlineLink {
-    text-decoration: underline;
-    color: var(--textCol2);
-    transition: all .2 ease-out;
-}
-
-.underlineLink:hover {
-    text-decoration: underline;
-    color: lightgray;
 }
 
 .flexCol {
