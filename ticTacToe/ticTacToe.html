@@ -3,14 +3,17 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>HvanA verhalen info</title>
+    <title>Boter kaas en Eieren</title>
     <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="style.css">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="../img/logo.png">
 </head>
 
 <body>
     <header>
+
         <nav>
             <div id="burgerMenu" tabindex="0">
                 Menu
@@ -23,13 +26,13 @@
 
             <ul>
                 <li>
-                    <a href="../index.html">Home</a>
+                    <a href="index.html">Home</a>
                 </li>
                 <!-- <li>
                     <a href="#">Projecten</a>
                 </li> -->
                 <!-- <li>
-                    <a href="../over.html">Over</a>
+                    <a href="over.html">Over</a>
                 </li> -->
                 <!-- <li>
                     <a href="#">Contact</a>
@@ -38,22 +41,40 @@
         </nav>
     </header>
 
-    <main id="detail">
-        <article>
-            <h1>HvanA verhalen</h1>
-            <div>
-                <p>Voor het vak Vormgeving 2 heb ik een site ontworpen in de stijl van de HvanA (link naar HvanA site).
-                    Hiervoor heb ik onder andere gekeken naar de marges tussen verschillende elementen, hoe elementen
-                    ten opzichte van elkaar zijn gepositioneerd, wat voor lettertypes en symbolen de HvanA gebruikt en
-                    nog meer. Vervolgens heb ik een breakpoint graph gemaakt zodat de site responsive gemaakt kon
-                    worden. En uiteindelijk heb ik aan de hand van alle informatie en schetsen die ik had verzamelt de
-                    site gemaakt in html en CSS. <br>
-                    <a href="index.html">Bekijk de site</a>
-                </p>
-
-                <img src="HvanAscreen.png" alt="">
+    <main id="main">
+        <div class='grid'>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
             </div>
-        </article>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+            <div class="row">
+                <div class="col"></div>
+                <div class="col"></div>
+                <div class="col"></div>
+            </div>
+        </div>
+
+        <p class="winner">.</p>
+
+        <div class="restart">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                <path
+                    d="M480.6 235.6c-11.3 0-20.4 9.1-20.4 20.4 0 112.6-91.6 204.2-204.2 204.2S51.8 368.6 51.8 256 143.4 51.8 256 51.8c61.5 0 118.5 27.1 157.1 73.7h-70.5c-11.3 0-20.4 9.1-20.4 20.4s9.1 20.4 20.4 20.4h114.6c11.3 0 20.4-9.1 20.4-20.4V31.4c0-11.3-9.1-20.4-20.4-20.4s-20.4 9.1-20.4 20.4v59C390.7 40.1 325.8 11 256 11 120.9 11 11 120.9 11 256s109.9 245 245 245 245-109.9 245-245c0-11.3-9.1-20.4-20.4-20.4z" />
+            </svg>
+        </div>
+
+        <div class="slidecontainer">
+            <p>makkelijk</p>
+            <input type="range" min="0" max="1" value=".5" step=".01" id="slider" class="slider">
+            <p>moeilijk</p>
+        </div>
+        <p class="sliderVal">50</p>
     </main>
 
     <footer>
@@ -103,7 +124,8 @@
         </ul>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="script.js"></script>
+    <script src="../js/script.js"></script>
 </body>
 
 </html>

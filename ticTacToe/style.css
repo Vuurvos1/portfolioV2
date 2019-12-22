@@ -1,0 +1,148 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+main {
+    width: 100vw;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+
+.grid {
+    margin: 2rem auto 0 auto;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0;
+
+    width: 85vw;
+    max-width: 400px;
+    height: 85vw;
+    max-height: 400px;
+}
+
+.grid div {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grid .row div {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+
+    font-size: 3rem;
+    font-weight: 400;
+}
+
+.winner {
+    margin-top: 1.6rem;
+    font-size: 3.6rem;
+}
+
+
+
+.grid .row:nth-child(1) div {
+    border-top: 0;
+}
+
+.grid .row:nth-child(3) div {
+    border-bottom: 0;
+}
+
+.grid .row div:first-child {
+    border-left: 0;
+}
+
+.grid .row div:last-child {
+    border-right: 0;
+}
+
+
+
+/* .grid .row:hover {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+.grid .row:nth-child(1):hover .col:nth-child(1), col {
+    background-color: rgba(0, 0, 0, .1);
+} */
+
+.grid .col:hover {
+    background-color: rgba(0, 0, 0, .1);
+}
+
+
+.slidecontainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.slidecontainer p {
+    margin: 0 .8rem;
+}
+
+
+/* input[type=range] */
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 200px;
+    height: .6rem;
+    border-radius: 6px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 1;
+    transition: all .2s ease;
+}
+
+/* Browser support */
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: black;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.slider::-webkit-slider-thumb:hover {
+    opacity: .8;
+}
+
+.restart {
+    background-color: black;
+    padding: .6rem 1.4rem;
+    margin-bottom: 2rem;
+}
+
+svg {
+    fill: white;
+    width: 2rem;
+    height: auto;
+}
