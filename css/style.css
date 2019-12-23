@@ -171,25 +171,25 @@ main ul li {
     background-color: black;
 }
 
-#main article {
+#main ul article {
     position: relative;
 }
 
-#main article img {
+#main ul article img {
     width: 100%;
     height: 100%;
     opacity: 1;
     transition: ease-out;
 }
 
-#main article h3 {
+#main ul article h3 {
     width: 100%;
     text-align: center;
     color: white;
     font-size: 2em;
 }
 
-#main article div {
+#main ul article div {
     position: absolute;
     top: 40%;
     left: 40%;
@@ -198,19 +198,19 @@ main ul li {
     transition: ease-out .3s;
 }
 
-#main article p {
+#main ul article p {
     color: var(--textCol2);
 }
 
-#main article:hover div,
-#main article:focus div,
-#main li a:focus div {
+#main ul article:hover div,
+#main ul article:focus div,
+#main ul li a:focus div {
     opacity: 1;
 }
 
-#main article:hover img,
-#main article:focus img, 
-#main li a:focus img {
+#main ul article:hover img,
+#main ul article:focus img, 
+#main ul li a:focus img {
     opacity: .4;
 }
 
@@ -258,6 +258,17 @@ main ul li {
 
 /* Over */
 
+
+
+/*detail teksten*/
+.detail {
+    margin: 3.6rem;
+}
+
+.detail p {
+    max-width: 30em;
+    margin-bottom: 1em;
+}
 
 
 /*
