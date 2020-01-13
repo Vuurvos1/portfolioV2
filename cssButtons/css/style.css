@@ -1,0 +1,687 @@
+:root {
+  --blue: #1089ff;
+  --lightGray1: #e5e5e5;
+  --lightGray2: #eeeeee;
+
+  --white: whitesmoke;
+  --red: #ff7675;
+  --gray: #2d3436;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+
+  font-family: sans-serif;
+}
+
+
+h1 {
+  color: var(--lightGray1);
+  text-align: center;
+  margin: 2rem;
+}
+
+
+body {
+  background-color: var(--gray);
+}
+
+form {
+  margin-bottom: 2rem;
+}
+
+
+.btn {
+  position: relative;
+  display: block;
+  /* color: white; */
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 30px 0;
+  border: 2px solid var(--red);
+  padding: 14px 60px;
+  overflow: hidden;
+  transition: .8s all ease;
+  text-align: center;
+  background: none;
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: var(--red);
+  z-index: -1;
+  transition: .8s;
+}
+
+
+/*Buttons*/
+section h2{
+  color: whitesmoke;
+  text-align: center;
+}
+
+section {
+  margin: 0 auto;
+  max-width: 900px;
+}
+
+.buttonGrid {
+  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 190px);
+  grid-gap: .8rem;
+}
+
+
+a.btn {
+  position: relative;
+  display: block;
+  color: white;
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 30px 0;
+  border: 2px solid #ff7675;
+  padding: 14px 60px;
+  overflow: hidden;
+  transition: 1s all ease;
+
+  text-align: center;
+}
+
+
+.btn::before{
+  background: #ff7675;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: -1;
+  transition: all 0.6s ease;
+}
+
+
+.btn1::before {
+  width: 0;
+  height: 100%;
+}
+
+.btn1:hover::before {
+  width: 100%;
+}
+
+.btn2::before {
+  width: 100%;
+  height: 0;
+}
+
+.btn2:hover::before {
+  height: 100%;
+}
+
+.btn3::before {
+  width: 100%;
+  height: 0%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.btn3:hover::before {
+  height: 380%;
+}
+
+.btn4::before {
+  width: 100%;
+  height: 0%;
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+.btn4:hover::before {
+  height: 380%;
+}
+
+
+/*2e button set*/
+
+.btna {
+  position: relative;
+  display: block;
+  /* color: white; */
+  font-size: 1rem;
+  text-decoration: none;
+  margin: 30px 0;
+  border: 2px solid var(--red);
+  padding: 14px 60px;
+  overflow: hidden;
+  transition: .8s all ease;
+  text-align: center;
+  background: none;
+}
+
+.btna::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  background: var(--red);
+  z-index: -1;
+  transition: .8s;
+}
+
+.btn5, .btn6 {
+  color: whitesmoke;
+}
+
+.btn5:hover, .btn6:hover {
+  color: var(--gray);
+}
+
+
+.btn7, .btn8 {
+  color: var(--gray);
+}
+
+.btn7:hover, .btn8:hover {
+  color: whitesmoke;
+}
+
+.btn5::before, .btn7::before {
+  top: 0;
+  border-radius: 0 0 50% 50%;
+}
+
+.btn6::before, .btn8::before {
+  bottom: 0;
+  border-radius: 50% 50% 0 0;
+}
+
+button.btn7::before, button.btn8::before {
+  height: 200%;
+}
+
+.btn5:hover::before,.btn6:hover::before{
+  height: 200%;
+}
+
+.btn7:hover::before,.btn8:hover::before{
+  height: 0%;
+}
+
+
+/*3e button set*/
+.btnz {
+  margin: 30px 0;
+  background: none;
+  border: 2px solid var(--red);
+  color: whitesmoke;
+  font-size: 1rem;
+  position: relative;
+}
+
+
+.btnz::before,.btnz::after{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  background: var(--gray);
+  transform: skewX(50deg);
+  transition: .4s linear;
+}
+
+
+.btn9::before,.btn9::after{
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 4px;
+  background-color: var(--gray);
+  /* background-color: red; */
+  transform: skewX(50deg);
+  transition: .4s linear;
+}
+
+.btn9::before{
+  top: -2px;
+  left: 10%;
+}
+
+.btn9::after{
+  bottom: -2px;
+  right: 10%;
+}
+
+.btn9:hover::before{
+  left: 80%;
+}
+
+.btn9:hover::after{
+  right: 80%;
+}
+
+
+
+/*4e button set*/
+.btn13 {
+  outline: none;
+  position: relative;
+  transition: all 0.3s;
+
+  border: 2px solid var(--red);
+  color: var(--white);
+}
+
+.btn13::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: var(--red);
+}
+
+.btn13:hover,
+.btn13:active {
+  color: var(--white);
+}
+
+.btn13:hover::after,
+.btn13:active::after {
+  width: 100%;
+}
+
+
+.btn14 {
+  outline: none;
+  position: relative;
+  transition: all 0.3s;
+
+  border: 2px solid var(--red);
+  color: var(--white);
+}
+
+.btn14::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+
+  width: 0%;
+  height: 100%;
+  top: 0;
+  right: 0;
+  background: var(--red);
+}
+
+.btn14:hover,
+.btn14:active {
+  color: var(--white);
+}
+
+.btn14:hover::after,
+.btn14:active::after {
+  width: 100%;
+}
+
+
+.btn15 {
+  outline: none;
+  position: relative;
+  transition: all 0.3s;
+
+  border: 2px solid var(--red);
+  color: var(--white);
+}
+
+.btn15::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+
+  width: 100%;
+  height: 0;
+  top: 0;
+  left: 0;
+  background: var(--red);
+}
+
+.btn15:hover,
+.btn15:active {
+  color: var(--white);
+}
+
+.btn15:hover::after,
+.btn15:active::after {
+  height: 100%;
+}
+
+
+
+.btn16 {
+  outline: none;
+  position: relative;
+  transition: all 0.3s;
+
+  border: 2px solid var(--red);
+  color: var(--white);
+}
+
+.btn16::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  transition: all 0.3s;
+
+  width: 100%;
+  height: 0;
+  bottom: 0;
+  left: 0;
+  background: var(--red);
+}
+
+.btn16:hover,
+.btn16:active {
+  color: var(--white);
+}
+
+.btn16:hover::after,
+.btn16:active::after {
+  height: 100%;
+}
+
+
+
+
+
+/*old*/
+
+
+/*
+button {
+  border: none;
+  cursor: pointer;
+  font-size: 1rem;
+  padding: 16px 32px;
+  background-color: var(--blue);
+
+  border-radius: 4px;
+  color: var(--lightGray1);
+
+  transition: .3s ease;
+}
+*/
+
+.button1:hover {
+  background-color: var(--gray);
+}
+
+.button2 {
+  box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.2);
+}
+
+.button2:hover {
+  box-shadow: none;
+}
+
+
+
+/* https://www.w3schools.com/howto/howto_css_animate_buttons.asp */
+.button4 {
+  color: white;
+  text-align: center;
+  width: 150px;
+  transition: 0.5s;
+}
+
+.button4 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.3s;
+}
+
+.button4 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.3s;
+}
+
+.button4:hover span {
+  padding-right: 25px;
+}
+
+.button4:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button5 {
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  text-decoration: none;
+  text-transform: capitalize;
+
+  padding: 16px 0px;
+  width: 150px;
+  overflow: hidden;
+
+  transition: all 0.2s linear 0s;
+}
+
+.button5:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button5:hover {
+  padding-right: 25px;
+}
+
+.button5:hover::before {
+  opacity: 1;
+  text-indent: 0px;
+}
+
+.button5::before {
+  content: "\00bb";
+  font-size: 15px;
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 0;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+  width: 40px;
+  transition: all 0.2s linear 0s;
+}
+
+
+
+input[type=text],
+select {
+  width: 50%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  border: none;
+  cursor: pointer;
+
+  font-size: 1rem;
+  padding: 16px 32px;
+  background-color: var(--blue);
+  border-radius: 4px;
+  color: var(--lightGray1)
+}
+
+input[type=submit]:hover {
+  background-color: var(--blueGray);
+}
+
+
+/* The slider itself */
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50%;
+  height: 12px;
+  border-radius: 6px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 1;
+
+  transition: .2s;
+}
+
+/* Browser support */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: var(--blue);
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+
+
+
+.dropdown1,
+.dropdown2 {
+  /* styling */
+  background-color: white;
+  border: thin solid blue;
+  border-radius: 4px;
+  display: inline-block;
+  font: inherit;
+  line-height: 1.5em;
+  padding: 0.5em 3.5em 0.5em 1em;
+
+  /* reset */
+  margin: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+
+
+.dropdown1 {
+  background-image:
+    linear-gradient(45deg, transparent 50%, blue 50%),
+    linear-gradient(135deg, blue 50%, transparent 50%),
+    linear-gradient(to right, skyblue, skyblue);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+}
+
+.dropdown1:focus {
+  background-image:
+    linear-gradient(45deg, white 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, white 50%),
+    linear-gradient(to right, gray, gray);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    100% 0;
+  background-size:
+    5px 5px,
+    5px 5px,
+    2.5em 2.5em;
+  background-repeat: no-repeat;
+  border-color: grey;
+  outline: 0;
+}
+
+
+
+
+.dropdown2 {
+  background-image:
+    linear-gradient(45deg, transparent 50%, gray 50%),
+    linear-gradient(135deg, gray 50%, transparent 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 20px) calc(1em + 2px),
+    calc(100% - 15px) calc(1em + 2px),
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+}
+
+select.dropdown2:focus {
+  background-image:
+    linear-gradient(45deg, green 50%, transparent 50%),
+    linear-gradient(135deg, transparent 50%, green 50%),
+    linear-gradient(to right, #ccc, #ccc);
+  background-position:
+    calc(100% - 15px) 1em,
+    calc(100% - 20px) 1em,
+    calc(100% - 2.5em) 0.5em;
+  background-size:
+    5px 5px,
+    5px 5px,
+    1px 1.5em;
+  background-repeat: no-repeat;
+  border-color: green;
+  outline: 0;
+}
+
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #000;
+}
+
+
+
+
+footer {
+  width: 100vw;
+}
+
+footer a {
+  margin: 0 auto;
+  text-align: center;
+  text-decoration: none;
+  color: var(--lightGray1);
+}
