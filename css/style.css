@@ -257,7 +257,147 @@ main ul li {
 }
 
 /* Over */
+#about p {
+    max-width: 35rem;
+    padding: 0 1rem;
+    margin: 0 auto 2rem;
+}
 
+
+
+
+
+/******
+Contact 
+******/
+#about {
+    padding-top: 4rem;
+}
+
+#about a:hover {
+color: violet;
+transition: .2s all;
+}
+
+
+form {
+    box-sizing: border-box;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 100vw;
+    /* margin-top: 75px; */
+    padding: 0 1rem 2rem 1rem;
+
+    max-width: 31rem;
+}
+
+fieldset {
+    border: none;
+
+}
+
+legend {
+    font-size: 1.6rem;
+    margin: 3px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 3px;
+}
+
+input[type=text],
+input[type=email],
+textarea {
+    box-sizing: border-box;
+    display: block;
+    border: 1.6px solid var(--textCol);
+    padding: .6rem;
+    font-size: 1rem;
+    width: 100%;
+
+    resize: none;
+
+    margin-bottom: .6rem;
+}
+
+#message {
+    min-height: 12em;
+}
+
+#submitbutton {
+    color: var(--textCol2);
+    background-color: var(--textCol);
+    border: none;
+    font-size: 1rem;
+    text-align: center;
+    padding: 14px 54px;
+    text-decoration: none;
+    position: relative;
+    transition: .3s all ease;
+
+    margin-top: .6rem
+}
+
+#submitbutton:hover {
+    opacity: .9;
+}
+
+/*
+#submitbutton::before {
+    background-color: yellowgreen;
+    content: "";
+    top: 50%;
+    left: 50%;
+    width: 50%;
+
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+}
+*/
+
+.btn {
+    position: relative;
+    display: block;
+    color: white;
+
+    /* border: 2px solid #ff7675; */
+    overflow: hidden;
+    transition: 1s all ease;
+
+    /* text-align: center; */
+}
+
+/*
+.btn::before {
+    background: #ff7675;
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    transition: all 0.6s ease;
+  }
+  
+  
+  .btn1::before {
+    width: 0;
+    height: 100%;
+  }
+
+  
+  
+
+  
+  .btn1:hover::before {
+    width: 100%;
+  }
+
+  
 
 
 /*detail teksten*/
@@ -361,51 +501,51 @@ Responsive
         position: fixed;
         bottom: 0;
         z-index: -1;
-    
+
         box-sizing: border-box;
         padding: 3.6rem 3rem 2rem 3rem;
-    
+
         height: var(--footerHeight);
         background-color: var(--bgCol2);
         color: var(--textCol2);
         width: 100vw;
     }
-    
+
     footer ul:first-child {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-    
+
     .footerSocial {
         display: flex;
         flex-direction: row;
     }
-    
+
     footer a {
         color: var(--textCol2);
     }
-    
+
     footer svg {
         fill: var(--textCol2);
         height: 2rem;
         width: auto;
     }
-    
+
     footer svg path {
         fill: var(--textCol2);
     }
-    
+
     .footerSocial li {
         margin-right: .6em;
     }
-    
+
     footer div:first-child {
         display: flex;
         flex-direction: row;
         justify-content: space-between;
     }
-    
+
     .footerCenter {
         margin: 1.2rem 0;
         color: darkgray;

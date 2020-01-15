@@ -30,9 +30,9 @@
                 <!-- <li>
                     <a href="#">Projecten</a>
                 </li> -->
-                <!-- <li>
+                <li>
                     <a href="over.html">Over</a>
-                </li> -->
+                </li>
                 <!-- <li>
                     <a href="#">Contact</a>
                 </li> -->
@@ -41,24 +41,36 @@
     </header>
 
 
-    <main>
+    <main id="about">
         <p>
-            Hoi ik ben Sam en ben 19 (var voor het jaar) jaar. Ik ben momenteel bezig met mijn tweede jaar Communication
+            Hoi ik ben Sam en ben <span id="age">19</span> jaar. Ik ben momenteel bezig met mijn tweede jaar Communication
             en Multimedia Design aan de Hogeschool van Amsterdam.
-            Mijn interesses voor deze studie liggen vooral bij het Front-end en tech gedeelte van de studie. mijn eigen
+            Mijn interesses voor deze studie liggen vooral bij het Front-end en tech vakken. Mijn eigen
             interesses zijn dan ook onder andere Programmeren, AI en game design.
             Zelf ben ik altijd op zoek naar nieuwe dingen om te leren en een optimalisatie freak waar ieder beetje
             performance uit mijn code gehaald moet worden.
+            En vergeet niet <a href="partyPickle/partyPickle.html">de augurk</a>
+            wat te eten te geven. 
+        </p>
 
+        <p>Vragen? Stuur mij dan gerust een mailtje naar <a
+                href="mailto: samdepanter@gmail.com">samdepanter@gmail.com</a>
+            of vul het form hier beneden in
         </p>
 
 
-
-        <p>Als je vragen hebt stuur mij dan vooral een mailtje</p>   
-
-
-        <form action=""></form>
-
+        <form action="mailto:samdepanter@gmail.com" method="post">
+            <fieldset>
+                <legend>Contact formulier</legend>
+                <label for="firstname">Naam:</label>
+                <input type="text" name="firstname" id="firstname" placeholder="uw naam" required>
+                <label for="emailadres">Email Adres:</label>
+                <input type="email" name="emailadres" id="emailadres" placeholder="voorbeeld@gmail.com" required>
+                <label for="message">Uw bericht:</label>
+                <textarea name="message" id="message" required></textarea>
+            </fieldset>
+            <input type="submit" value="Verzenden" id="submitbutton" />
+        </form>
     </main>
 
 
@@ -111,6 +123,7 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="js/date.js"></script>
 </body>
 
 </html>
