@@ -117,6 +117,18 @@ nav ul a {
     font-weight: bold;
 }
 
+
+nav .backArrow {
+    margin: 0 auto 0 1.2rem;
+    margin-right: auto;
+}
+
+nav a svg {
+    fill: var(--textCol);
+    width: auto;
+    height: 1.2rem;
+}
+
 #burgerMenu {
     display: flex;
     flex-direction: row;
@@ -143,9 +155,9 @@ nav ul a {
 }
 
 
-/*
+/*********
 Main
-*/
+*********/
 main {
     width: 100%;
     height: auto;
@@ -219,6 +231,7 @@ main ul li {
 /* Projecten */
 #detail article p {
     max-width: 30em;
+    margin-bottom: 3rem;
 }
 
 #detail article {
@@ -236,7 +249,8 @@ main ul li {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     grid-template-rows: auto;
-    grid-gap: 1rem;
+    grid-gap: 2rem 1rem;
+    margin-bottom: 3rem;
 }
 
 #detail .articleGrid img {
@@ -252,6 +266,36 @@ main ul li {
     text-decoration: underline;
     color: var(--textCol);
 }
+
+
+#detail .projWeb {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 2rem 1rem;
+    margin-bottom: 3rem;
+}
+
+#detail .projWeb img {
+    width: 100%;
+    height: auto;
+}
+
+#detail .sewerGrid {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+    grid-template-rows: auto;
+    grid-gap: 2rem 1rem;
+    margin-bottom: 3rem;
+}
+
+#detail .sewerGrid img {
+    width: 100%;
+    height: auto;
+}
+
 
 /* Over */
 #about p {
