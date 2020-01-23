@@ -13,9 +13,8 @@ body {
     --textCol: #0a0a0a;
     --textCol2: #f0f0f0;
     --bgCol: #ffffff;
-    --bgCol2: #252c2e;
+    --bgCol2: #202020;
     --accentCol: #018ed7;
-
 
     /* overig */
     --yeet: 1;
@@ -23,8 +22,6 @@ body {
 
     max-width: 100vw;
     overflow-x: hidden;
-
-
 }
 
 li {
@@ -453,8 +450,13 @@ footer ul li {
 
 footer svg {
     fill: var(--textCol2);
-    height: 2rem;
+    height: 2.2rem;
     width: auto;
+    transition: all ease .3s;
+}
+
+footer svg:hover {
+    transform: scale(1.2)
 }
 
 footer svg path {
@@ -478,8 +480,8 @@ footer div:first-child {
     font-size: 1rem;
 }
 
-.footerCenter a {
-    color: darkgray;
+footer a {
+    color: var(--textCol2);
 }
 
 /*
@@ -520,20 +522,6 @@ Responsive
     .footerSocial {
         display: flex;
         flex-direction: row;
-    }
-
-    footer a {
-        color: var(--textCol2);
-    }
-
-    footer svg {
-        fill: var(--textCol2);
-        height: 2rem;
-        width: auto;
-    }
-
-    footer svg path {
-        fill: var(--textCol2);
     }
 
     .footerSocial li {
