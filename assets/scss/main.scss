@@ -1,0 +1,14 @@
+@import "reset";
+@import "variables";
+
+@import "header";
+@import "footer";
+
+body {
+  background-color: gray;
+}
+
+main {
+  min-height: 100vh;
+  padding-top: 3rem;
+}

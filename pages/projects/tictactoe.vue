@@ -1,3 +1,5 @@
 <template>
-  <h1>Tic Tac Toe</h1>
+  <main>
+    <h1>Tic Tac Toe</h1>
+  </main>
 </template>
