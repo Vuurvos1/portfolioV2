@@ -10,9 +10,13 @@
   --col-secondary: #03DAC6;
   --col-secondary-var: #018786;
 
+  --col-surface: #ffffff;
+
   --text-col: var(--black);
 
   --col-error: #B00020;
+
+  --dp-04: 0px 4px 5px rgba(0, 0, 0, 0.14), 0px 2px 4px rgba(0, 0, 0, 0.2), 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -21,6 +25,8 @@
     --col-primary-var: #3700B3;
     --col-secondary: #03DAC6;
     --col-secondary-var: #03DAC6;
+
+    --col-surface: #121212;
 
     --col-error: #CF6679;
   }

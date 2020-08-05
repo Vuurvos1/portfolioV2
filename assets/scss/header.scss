@@ -1,5 +1,5 @@
 header {
-  z-index: 3;
+  z-index: 5;
   position: fixed;
   top: 0;
 
@@ -13,6 +13,13 @@ header {
 
   transition: top .3s ease-in-out;
   background-color: var(--white);
+
+  box-shadow: var(--dp-04);
+
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
 
   .menu {
     display: flex;
@@ -44,7 +51,7 @@ header {
       display: none;
 
       &:checked~.menu__list {
-        transform: translateX(0);
+        @include transform (translateX(0));
       }
     }
 
@@ -63,11 +70,13 @@ header {
       height: 100vh;
 
       transition: all ease-out .3s;
-      transform: translateX(100%);
+      @include transform (translateX(100%));
 
       position: absolute;
       overflow: hidden;
       margin-top: -1px;
+
+      box-shadow: 0px 50px 24px rgba(0, 0, 0, 0.14), 0px 50px 30px rgba(0, 0, 0, 0.12), 0px 50px 10px rgba(0, 0, 0, 0.2);
     }
 
     &__item {
@@ -76,6 +85,12 @@ header {
 
       &:first-child {
         margin-top: 1rem;
+      }
+
+      a {
+        @include hocus {
+          background-color: pink;
+        }
       }
     }
   }
@@ -97,7 +112,9 @@ header {
         width: initial;
         height: initial;
 
-        transform: translateX(0);
+        box-shadow: none;
+
+        @include transform (translateX(0));
       }
 
       &__item {
@@ -109,6 +126,10 @@ header {
 
         &:last-child {
           margin-right: 0;
+        }
+
+        @include hocus() {
+          background-color: pink;
         }
       }
     }

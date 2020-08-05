@@ -2,11 +2,42 @@
   <main>
     <h1>Contact page</h1>
 
-    <form>
-      <label for="fname">First name:</label><br />
-      <input id="fname" type="text" name="fname" /><br />
-      <label for="lname">Last name:</label><br />
-      <input id="lname" type="text" name="lname" />
+    <form action="mailto:samdepanter@gmail.com?subject=Portfolio" method="post">
+      <div class="textInput--container">
+        <input
+          id="firstname"
+          type="text"
+          name="firstname"
+          placeholder="Your Name"
+          required
+        />
+        <label for="firstname">Your Name</label>
+      </div>
+
+      <div class="textInput--container">
+        <input
+          id="emailadres"
+          type="email"
+          name="emailadres"
+          placeholder="Your Email Adress"
+          required
+        />
+        <label for="emailadres">Your Email Adress</label>
+      </div>
+
+      <div class="textInput--container textInput--large">
+        <textarea
+          id="message"
+          name="message"
+          placeholder="Leave a Message"
+          required
+        ></textarea>
+        <label for="message">Leave a Message</label>
+      </div>
+
+      <button id="submitbutton" type="submit" class="button">
+        Send Message
+      </button>
     </form>
   </main>
 </template>

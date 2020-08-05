@@ -1,11 +1,21 @@
 @import "reset";
 @import "variables";
+@import "mixins";
+
+@import "input";
 
 @import "header";
 @import "footer";
 
 body {
-  background-color: gray;
+  background-color: var(--white);
+}
+
+body,
+header,
+main,
+footer {
+  width: calc(100vw - (100vw - 100%));
 }
 
 main {
