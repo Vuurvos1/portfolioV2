@@ -24,7 +24,19 @@ export default {
         content: process.env.npm_package_description || "",
       },
     ],
-    link: [{ rel: "icon", type: "image/x-icon", href: "/favicon.ico" }],
+    link: [
+      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
+      {
+        rel: "styleSheet",
+        href:
+          "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap",
+      },
+      {
+        rel: "styleSheet",
+        href:
+          "https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap",
+      },
+    ],
   },
   /*
    ** Global CSS

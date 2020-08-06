@@ -33,7 +33,7 @@
           width: 5rem;
           height: auto;
 
-          transition: all .2s ease-out;
+          transition: all 0.2s ease-out;
 
           @include hocus {
             fill: var(--col-primary);
@@ -46,29 +46,19 @@
 
 /* Tablet */
 @media screen and (min-width: 48rem) {
-  .contactPage {
-    &__form {
-      #submitbutton {
-        margin-right: 2rem;
-      }
-    }
-  }
 }
 
 /* Desktop */
 @media screen and (min-width: 64rem) {
   .contactPage {
     &__form {
-
       h1,
       h2 {
         text-align: center;
       }
-
     }
 
     &__social {
-
       h1,
       h2 {
         text-align: center;

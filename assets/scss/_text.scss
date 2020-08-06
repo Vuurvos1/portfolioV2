@@ -1,13 +1,79 @@
-h1 {
+h1,
+.heading1 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 6.125rem;
+  font-weight: lighter;
+  letter-spacing: -1.5px;
+
   margin-bottom: .8em;
 }
 
-h2 {
+h2,
+.heading2 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 3.8125rem;
+  font-weight: lighter;
+  letter-spacing: -.5px;
+
   margin-bottom: .8em;
 }
 
-h3 {}
+h3,
+.heading3 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 3.0625rem;
+  font-weight: normal;
+  letter-spacing: 0px;
+}
 
-h4 {}
+h4,
+.heading4 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 2.1875rem;
+  font-weight: normal;
+  letter-spacing: .25px;
+}
 
-p {}
+h5,
+.heading5 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+
+h6,
+.heading6 {
+  font-family: 'Ubuntu', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  letter-spacing: .15px;
+}
+
+.body1 {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  letter-spacing: .5px;
+
+}
+
+p,
+.body2 {
+  font-family: 'Roboto', sans-serif;
+  font-size: .875rem;
+  font-weight: normal;
+  letter-spacing: .25px;
+
+  margin-bottom: 1em;
+}
+
+button,
+.button {
+  font-family: 'Roboto', sans-serif;
+  font-size: .875rem;
+  font-weight: normal;
+  letter-spacing: 1.25px;
+
+  text-transform: uppercase;
+}
