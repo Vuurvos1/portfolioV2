@@ -32,12 +32,29 @@
         svg {
           width: 5rem;
           height: auto;
+          fill: var(--black);
 
-          transition: all 0.2s ease-out;
+          transition: all .2s ease-out;
+        }
 
+        a {
           @include hocus {
-            fill: var(--col-primary);
+            outline: none;
+
+            svg {
+              fill: var(--col-primary);
+            }
           }
+        }
+      }
+
+      &:hover {
+        a:focus svg {
+          fill: var(--black);
+        }
+
+        a:hover svg {
+          fill: var(--col-primary);
         }
       }
     }
@@ -45,13 +62,13 @@
 }
 
 /* Tablet */
-@media screen and (min-width: 48rem) {
-}
+@media screen and (min-width: 48rem) {}
 
 /* Desktop */
 @media screen and (min-width: 64rem) {
   .contactPage {
     &__form {
+
       h1,
       h2 {
         text-align: center;
@@ -59,6 +76,7 @@
     }
 
     &__social {
+
       h1,
       h2 {
         text-align: center;

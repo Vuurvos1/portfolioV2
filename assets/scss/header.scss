@@ -88,8 +88,27 @@ header {
       }
 
       a {
+        position: relative;
+        color: var(--black);
+        transition: all .2s ease;
+
+        &::before {
+          content: '';
+          position: absolute;
+          background-color: var(--black);
+          left: 0;
+          bottom: -.1rem;
+          width: 0;
+          height: .075rem;
+          transition: all .2s ease;
+        }
+
         @include hocus {
-          background-color: pink;
+          outline: none;
+
+          &::before {
+            width: 100%;
+          }
         }
       }
     }
@@ -106,7 +125,7 @@ header {
 
       &__list {
         flex-direction: row;
-
+        overflow: visible;
         position: initial;
 
         width: initial;
@@ -126,10 +145,6 @@ header {
 
         &:last-child {
           margin-right: 0;
-        }
-
-        @include hocus() {
-          background-color: pink;
         }
       }
     }

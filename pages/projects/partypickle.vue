@@ -1,7 +1,9 @@
 <template>
-  <main>
-    <section><h2>party pickle graphic</h2></section>
+  <main class="col-2">
     <section>
+      <h2>party pickle graphic</h2>
+    </section>
+    <section class="col-2-content">
       <h1>Party Pickle</h1>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aperiam vitae
@@ -20,3 +22,9 @@
     </section>
   </main>
 </template>
+
+<script>
+export default {
+  layout: "footerVar",
+};
+</script>

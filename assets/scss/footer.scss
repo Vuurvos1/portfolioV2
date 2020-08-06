@@ -8,3 +8,11 @@ footer {
     margin: 0;
   }
 }
+
+.footer--primary-col {
+  background-color: var(--col-primary);
+
+  p {
+    color: var(--white);
+  }
+}

@@ -73,3 +73,9 @@
     <script src="/js/ticTacToe.js"></script>
   </main>
 </template>
+
+<script>
+export default {
+  layout: "footerVar",
+};
+</script>
