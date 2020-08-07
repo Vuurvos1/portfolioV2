@@ -3,7 +3,9 @@
     <h1>Projects page</h1>
     <ul>
       <li v-for="article of articles" :key="article.slug">
-        <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }">
+        <NuxtLink
+          :to="{ name: 'projects-slug', params: { slug: article.slug } }"
+        >
           <img :src="article.img" />
           <div>
             <h2>{{ article.title }}</h2>

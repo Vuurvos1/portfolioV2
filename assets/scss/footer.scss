@@ -9,7 +9,8 @@ footer {
   }
 }
 
-.footer--primary-col {
+.footer--primary-col,
+main.footer--var+footer {
   background-color: var(--col-primary);
 
   p {
