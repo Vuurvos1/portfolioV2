@@ -62,13 +62,8 @@
     C
   </div>
   <main v-else>
-    Not A/B/C
-
     <article>
-      <h1>{{ article.title }}</h1>
-      <p>{{ article.description }}</p>
       <img :src="article.img" :alt="article.alt" />
-
       <nuxt-content :document="article" />
     </article>
   </main>
