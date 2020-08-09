@@ -1,6 +1,6 @@
 <template>
   <main class="projects">
-    <section>
+    <section class="header">
       <h1>Projects</h1>
 
       <svg

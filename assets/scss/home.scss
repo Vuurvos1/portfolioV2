@@ -1,0 +1,61 @@
+.homePage {
+  overflow-x: hidden;
+
+  &__about {
+    margin-top: 14rem;
+    // margin-top: 14rem;
+
+    margin-bottom: 10rem;
+    position: relative;
+    // overflow-x: hidden;
+
+    .scroll {
+      text-align: center;
+    }
+
+    svg {
+      z-index: -1;
+    }
+
+    .svg1 {
+      position: absolute;
+
+      top: -269px;
+      left: -88px;
+    }
+
+    .svg2 {
+      position: absolute;
+
+      top: -190px;
+      left: 1124px;
+    }
+  }
+
+  &__about2 {
+    position: relative;
+    // overflow-x: hidden;
+
+    margin-bottom: 12rem;
+
+    svg {
+      z-index: -1;
+    }
+
+    .svg3 {
+      position: absolute;
+
+      top: 77px;
+      //   top: 930px;
+      left: -51px;
+    }
+
+    .svg4 {
+      position: absolute;
+
+      top: 110px;
+      //   top: 736px;
+      left: 948px;
+    }
+  }
+}
