@@ -3,6 +3,8 @@
     <Header />
     <Nuxt />
     <FooterVar />
+
+    <!-- <script src="/js/scrollpos.js"></script> -->
   </div>
 </template>
 

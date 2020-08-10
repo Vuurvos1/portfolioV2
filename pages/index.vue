@@ -109,6 +109,8 @@
 
       <a href="/contact">Lets get in contact ></a>
     </section>
+
+    <script src="/js/parallaxBlobs.js" defer></script>
   </main>
 </template>
 
