@@ -146,19 +146,20 @@ body .button {
     transform: translate(-50%, -50%);
     z-index: -1;
     border-radius: 100rem;
-    transition: all 0.3s ease-out;
+    transition: all 0.4s ease-out;
   }
 
   &:hover {
     background: rgba(98, 0, 238, 0.04);
 
     &::before {
-      width: 10rem;
-      height: 10rem;
+      width: 20rem;
+      height: 20rem;
     }
   }
 
   &:focus {
+    outline: none;
     background: rgba(98, 0, 238, 0.12);
   }
 }

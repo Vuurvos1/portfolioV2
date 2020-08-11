@@ -43,6 +43,9 @@
   grid-column: span 4;
 }
 
+.width-7\/12 {
+  grid-column: span 4;
+}
 
 /* Tablet */
 @media screen and (min-width: 48rem) {
@@ -51,8 +54,17 @@
   }
 
   .width-4\/9 {
-    grid-column: 3/7;
+    grid-column: 3 / 7;
   }
+
+  .width-3\/10 {
+    grid-column: 1 / 9;
+  }
+
+  .width-7\/12 {
+    grid-column: 5 / 9;
+  }
+
 }
 
 /* Desktop */
@@ -71,6 +83,10 @@
 
   .width-3\/10 {
     grid-column: 3 / 11;
+  }
+
+  .width-7\/12 {
+    grid-column: 7 / 13;
   }
 }
 
