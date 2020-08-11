@@ -1,5 +1,6 @@
 .homePage {
   max-width: initial;
+  overflow-x: hidden;
   padding: 0 .75rem;
 
   &__about {
@@ -98,7 +99,7 @@
   }
 
   &__projects {
-    margin-bottom: 14rem;
+    margin: 0 auto 14rem auto;
     max-width: 100rem;
 
     .heading3 {
@@ -122,6 +123,7 @@
   &__contact {
     position: relative;
     padding-bottom: 18rem;
+    margin: 0 auto;
     max-width: 100rem;
 
     .button {
