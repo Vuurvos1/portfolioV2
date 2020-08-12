@@ -1,6 +1,6 @@
 .ticTacToe {
   &__Grid {
-    margin: 5rem auto 0 auto;
+    margin: 5rem auto 1rem auto;
 
     display: grid;
     grid-template-rows: 1fr 1fr 1fr;
@@ -53,16 +53,43 @@
 
   }
 
+  .winner {
+    text-align: center;
+  }
+
   .restart {
     background-color: black;
     padding: .6rem 1.4rem;
-    margin-bottom: 2rem;
+
+    margin: 0 auto 2rem auto;
+    max-width: fit-content;
   }
 
   svg {
     fill: white;
     width: 2rem;
     height: auto;
+  }
+
+  .sliderContainer {
+    margin: 0 auto .4rem auto;
+    max-width: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    #slider {
+      margin: 0 1rem;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .sliderVal {
+    text-align: center;
   }
 }
 
@@ -80,5 +107,10 @@
 
   p {
     margin: 0 auto 1em auto;
+
+    a.button {
+      display: inline-block;
+    }
+
   }
 }

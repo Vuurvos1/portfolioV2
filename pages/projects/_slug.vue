@@ -1,11 +1,44 @@
 <template>
   <main v-if="article.title === 'Party Pickle'" class="col-2 footer--var">
-    <section>
-      <h2>party pickle graphic</h2>
+    <section class="partyPickle">
+      <div class="positionMove">
+        <div class="moveSpace">
+          <img
+            class="pickle grabNone selectNone"
+            src="/img/partyPickle/pickle.png"
+            alt="Augurk"
+          />
+        </div>
+      </div>
+      <div class="pickleSaus"></div>
+
+      <div class="deksel"></div>
+      <img
+        class="jar grabNone selectNone"
+        src="/img/partyPickle/jar.png"
+        alt="Augurken pot"
+      />
+
+      <div class="eten"></div>
+      <div class="eten"></div>
+      <div class="eten"></div>
+      <div class="eten"></div>
+      <div class="eten"></div>
+
+      <div class="knoppen">
+        <div id="drink" class="button selectNone">
+          Geef Drinken
+        </div>
+        <div id="eten" class="button selectNone">
+          Geef Eten
+        </div>
+      </div>
     </section>
     <section class="col-2-content">
       <nuxt-content :document="article" />
     </section>
+
+    <script src="/js/partyPickle.js" defer></script>
   </main>
   <main v-else-if="article.title === 'Tic Tac Toe'" class="col-2 footer--var">
     <section class="ticTacToe">
@@ -27,7 +60,7 @@
         </div>
       </div>
 
-      <p class="winner">.</p>
+      <p class="winner heading5">.</p>
 
       <div class="restart">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
@@ -37,7 +70,7 @@
         </svg>
       </div>
 
-      <div class="slidecontainer">
+      <div class="sliderContainer">
         <p>makkelijk</p>
         <input
           id="slider"

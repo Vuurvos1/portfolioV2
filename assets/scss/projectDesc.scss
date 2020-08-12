@@ -16,11 +16,21 @@
     p {
       max-width: 30rem;
       margin: 0 auto 1em auto;
+
+      a {
+        display: initial;
+      }
+    }
+
+    a.button {
+      display: inline-block;
     }
 
     img {
       width: 100%;
       height: auto;
+
+      margin-bottom: 1rem;
     }
 
     .projects--grid {

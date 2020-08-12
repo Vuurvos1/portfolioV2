@@ -9,9 +9,8 @@ alt: Hiking app
 
 Het idee voor deze app is ontstaan tijdens project Web waar we een applicatie hebben gemaakt om reizigers te helpen. De uitwerking van deze app heb ik gedaan voor het vak Front End. Ik heb erg gelet op de semantiek en accessibility van de site. Voor de functionaliteit heb ik een deel van de site werkend gemaakt door gebruik te maken van meerdere API’s die kijken wat je huidige locatie is en aan de hand daarvan bepalen welke wandelroutes in de buurt zijn.
 
-<!-- img set 3 -->
-<!-- img set 2 -->
-<!-- []() -->
+![Three screenshots from the project web aplication](/img/projweb/projwebscreens1.png)
+![Two screenshots from the project web aplication](/img/projweb/projwebscreens2.png)
 
-<!-- link to code -->
-<!-- link to live version -->
+<a href="https://vuurvos1.github.io/projWeb/" class="button button--live">Live</a>
+<a href="https://github.com/Vuurvos1/projWeb" class="button button--code">Code</a>

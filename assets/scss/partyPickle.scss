@@ -1,0 +1,241 @@
+.grabNone {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  -o-user-drag: none;
+  /* user-drag: none; */
+}
+
+.selectNone {
+  /*    No text select*/
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+}
+
+.partyPickle {
+  position: relative;
+  z-index: 1;
+  min-height: 42rem;
+  overflow-x: hidden;
+
+  .pickle {
+    position: absolute;
+    top: 83px;
+    left: 85px;
+
+    cursor: pointer;
+
+    z-index: 2;
+  }
+
+  .moveSpace {
+    width: 274px;
+    height: 320px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  .positionMove {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 24vh;
+  }
+
+  .pickleSaus {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    height: 300px;
+    width: 276px;
+    bottom: 24vh;
+    background-color: #919B54;
+    z-index: -1;
+
+    border-radius: 0 0 22px 22px;
+  }
+
+
+  .knoppen {
+    display: block;
+    position: absolute;
+    display: flex;
+    width: 100%;
+    height: auto;
+    bottom: 3em;
+    flex-direction: row;
+    justify-content: center;
+    cursor: pointer;
+
+    z-index: 2;
+
+    .button {
+      margin: 0 1rem;
+    }
+  }
+
+  .jar {
+    display: block;
+    margin: 0 auto;
+    position: absolute;
+    width: auto;
+    left: 0;
+    right: 0;
+    bottom: 24vh;
+  }
+}
+
+
+
+
+
+
+.deksel {
+  width: 210px;
+  height: 40px;
+  margin: 0 auto;
+  background-color: #A5A5A5;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: calc(24vh + 360px);
+  z-index: 1;
+
+  transform-origin: 0% 100%;
+
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+
+  animation-fill-mode: forwards;
+}
+
+.dekselAnimate {
+  animation-name: dekselAn;
+  animation-duration: 4s;
+}
+
+.dekselAnimateClose {
+  animation-name: dekselAnClose;
+  animation-duration: 3s;
+}
+
+.dekselOpen {
+  -webkit-transform: translate(-70px, -100px);
+  -moz-transform: translate(-70px, -100px);
+  -ms-transform: translate(-70px, -100px);
+  -o-transform: translate(-70px, -100px);
+  transform: translate(-70px, -100px);
+  -webkit-transform: rotate(-90deg);
+}
+
+.eten {
+  border-radius: 50%;
+  position: absolute;
+
+  top: -50px;
+  left: 50%;
+
+  -webkit-transition: all 0.3s ease-out;
+  -moz-transition: all 0.3s ease-out;
+  -o-transition: all 0.3s ease-out;
+  -ms-transition: all 0.3s ease-out;
+  transition: all 0.3s ease-out;
+}
+
+.etenAnimate {
+  animation-name: etenDrop;
+  animation-duration: 3.2s;
+}
+
+
+@keyframes dekselAn {
+  0% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+
+  25% {
+    -webkit-transform: translate(0px, -100px);
+    -moz-transform: translate(0px, -100px);
+    -ms-transform: translate(0px, -100px);
+    -o-transform: translate(0px, -100px);
+    transform: translate(0px, -100px);
+  }
+
+  50% {
+    -webkit-transform: rotate(-90deg);
+  }
+
+  100% {
+    -webkit-transform: translate(-70px, -100px);
+    -moz-transform: translate(-70px, -100px);
+    -ms-transform: translate(-70px, -100px);
+    -o-transform: translate(-70px, -100px);
+    transform: translate(-70px, -100px);
+    -webkit-transform: rotate(-90deg);
+  }
+}
+
+
+@keyframes dekselAnClose {
+  0% {
+    -webkit-transform: translate(-70px, -100px);
+    -moz-transform: translate(-70px, -100px);
+    -ms-transform: translate(-70px, -100px);
+    -o-transform: translate(-70px, -100px);
+    transform: translate(-70px, -100px);
+    -webkit-transform: rotate(-90deg);
+  }
+
+  20% {
+    -webkit-transform: rotate(-90deg);
+  }
+
+  60% {
+    -webkit-transform: translate(0px, -100px);
+    -moz-transform: translate(0px, -100px);
+    -ms-transform: translate(0px, -100px);
+    -o-transform: translate(0px, -100px);
+    transform: translate(0px, -100px);
+  }
+
+  100% {
+    -webkit-transform: translate(0, 0);
+    -moz-transform: translate(0, 0);
+    -ms-transform: translate(0, 0);
+    -o-transform: translate(0, 0);
+    transform: translate(0, 0);
+  }
+}
+
+@keyframes etenDrop {
+  0% {
+    @include transform(translate(0, 0));
+  }
+
+  60% {
+    opacity: 1;
+  }
+
+  100% {
+    @include transform(translateY(70vh));
+    opacity: 0;
+  }
+}

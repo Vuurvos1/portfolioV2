@@ -22,3 +22,6 @@ worden. Het algoritme kijkt dan naar alle scenario's waar de computer
 wint en geeft deze een score van +1, als hij verliest een score van -1
 en bij een gelijkspel een score van 0. Vervolgens kiest hij het scenario
 met de hoogste score.
+
+<a href="https://vuurvos1.github.io/tictactoe/" class="button button--live">Live</a>
+<a href="https://github.com/Vuurvos1/tictactoe" class="button button--code">Code</a>
