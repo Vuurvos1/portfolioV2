@@ -61,9 +61,8 @@
   <div v-else-if="article.title === 'C'">
     C
   </div>
-  <main v-else>
+  <main v-else class="projectDesc">
     <article>
-      <img :src="article.img" :alt="article.alt" />
       <nuxt-content :document="article" />
     </article>
   </main>
