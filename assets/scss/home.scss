@@ -1,0 +1,210 @@
+.homePage {
+  max-width: initial;
+  overflow-x: hidden;
+  padding: 0 .75rem;
+
+  &__about {
+    max-width: 100rem;
+    margin: 6rem auto 4rem auto;
+    position: relative;
+
+    h1 {
+      font-size: 3.0625rem;
+    }
+
+    .scroll {
+      text-align: center;
+      position: relative;
+      margin: 0 auto;
+      color: var(--black);
+
+      &::before {
+        content: '';
+        position: absolute;
+        background-color: var(--black);
+
+        width: 100%;
+        height: 2px;
+
+        border-radius: 1rem;
+        transition: all .2s ease;
+
+        left: 0;
+        bottom: -.2rem;
+      }
+
+      @include hocus() {
+        outline: none;
+
+        &::before {
+          transform: translateX(-15%);
+          width: 140%;
+        }
+      }
+    }
+
+    svg,
+    .svg1,
+    .svg2 {
+      z-index: -1;
+      position: absolute;
+      transition: all .1 ease-out;
+    }
+
+    .svg1 {
+      top: -269px;
+      left: 0;
+      transform: translateX(-60px);
+
+      fill: var(--col-secondary)
+    }
+
+    .svg2 {
+      top: 210px;
+      right: 0;
+      transform: translateX(210px);
+
+      fill: var(--col-primary)
+    }
+  }
+
+  &__about2 {
+    position: relative;
+    max-width: 100rem;
+    margin: 0 auto 10rem auto;
+    padding-top: 4rem;
+
+    svg,
+    .svg3,
+    .svg4 {
+      z-index: -1;
+      position: absolute;
+      transition: all .1 ease-out;
+    }
+
+    .svg3 {
+      top: 77px;
+      left: 0;
+      transform: translateX(-51px);
+
+      fill: var(--col-secondary-var)
+    }
+
+    .svg4 {
+      display: none;
+
+      fill: var(--col-secondary)
+    }
+  }
+
+  &__projects {
+    margin: 0 auto 14rem auto;
+    max-width: 100rem;
+
+    .heading3 {
+      font-size: 1.5rem;
+      color: var(--black);
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: baseline;
+
+      svg {
+        height: 1.5rem;
+        width: auto;
+        margin-left: 1rem;
+        fill: var(--black);
+      }
+    }
+  }
+
+  &__contact {
+    position: relative;
+    padding-bottom: 18rem;
+    margin: 0 auto;
+    max-width: 100rem;
+
+    .button {
+      width: fit-content;
+    }
+
+    svg,
+    .svg5 {
+      z-index: -1;
+      position: absolute;
+      transition: all .1 ease-out;
+    }
+
+    .svg5 {
+      top: -12rem;
+      left: 2rem;
+
+      width: 600px;
+      height: auto;
+
+      fill: var(--col-secondary);
+    }
+  }
+}
+
+
+/* Tablet */
+@media screen and (min-width: 48rem) {
+  .homePage {
+    &__about {
+      margin-top: 14rem;
+      margin-bottom: 6rem;
+
+      h1 {
+        font-size: 3.8125rem;
+      }
+
+      .svg1 {
+        top: -269px;
+        transform: translateX(-88px);
+      }
+
+      .svg2 {
+        top: -160px;
+        transform: translateX(-100px);
+
+      }
+    }
+
+    &__about2 {
+      position: relative;
+
+      padding-top: 4rem;
+      margin-bottom: 14rem;
+
+      .svg3 {
+        top: 77px;
+        transform: translateX(-51px);
+      }
+
+      .svg4 {
+        display: initial;
+
+        top: 110px;
+        right: 0;
+        transform: translateX(80px)
+      }
+    }
+
+    &__projects {
+      .heading3 {
+        font-size: 2.1875rem;
+      }
+
+      svg {
+        height: 2.1875rem;
+      }
+
+    }
+  }
+}
+
+
+// desktop
+@media screen and (min-width: 64rem) {}

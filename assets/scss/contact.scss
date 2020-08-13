@@ -1,0 +1,86 @@
+.contactPage {
+  padding-top: 6rem;
+
+  h1,
+  h2 {
+    font-size: 2rem;
+  }
+
+  .contactPage__form {
+    margin-bottom: 2rem;
+
+    #submitbutton {
+      display: block;
+      margin-left: auto;
+    }
+  }
+
+  .contactPage__social {
+    margin-bottom: 2rem;
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      flex-wrap: wrap;
+
+      li {
+        font-size: 0;
+        margin: 0 1rem 1rem 1rem;
+
+        svg {
+          width: 5rem;
+          height: auto;
+          fill: var(--black);
+
+          transition: all .2s ease-out;
+        }
+
+        a {
+          @include hocus {
+            outline: none;
+
+            svg {
+              fill: var(--col-primary);
+            }
+          }
+        }
+      }
+
+      &:hover {
+        a:focus svg {
+          fill: var(--black);
+        }
+
+        a:hover svg {
+          fill: var(--col-primary);
+        }
+      }
+    }
+  }
+}
+
+/* Tablet */
+@media screen and (min-width: 48rem) {}
+
+/* Desktop */
+@media screen and (min-width: 64rem) {
+  .contactPage {
+    &__form {
+
+      h1,
+      h2 {
+        text-align: center;
+      }
+    }
+
+    &__social {
+
+      h1,
+      h2 {
+        text-align: center;
+      }
+    }
+  }
+}

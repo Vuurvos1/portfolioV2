@@ -1,0 +1,116 @@
+.ticTacToe {
+  &__Grid {
+    margin: 5rem auto 1rem auto;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 0;
+
+    width: 85vw;
+    max-width: 400px;
+    height: 85vw;
+    max-height: 400px;
+
+    div {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    .row div {
+      display: flex;
+
+      justify-content: center;
+      align-items: center;
+
+      border-color: black;
+      border-width: 2px;
+      border-style: solid;
+
+      font-size: 3rem;
+      font-weight: 400;
+    }
+
+    // remove unnecessary grid lines
+    .row:nth-child(1) div {
+      border-top: 0;
+    }
+
+    .row:nth-child(3) div {
+      border-bottom: 0;
+    }
+
+    .row div:first-child {
+      border-left: 0;
+    }
+
+    .row div:last-child {
+      border-right: 0;
+    }
+
+    .col:hover {
+      background-color: rgba(0, 0, 0, .1);
+    }
+
+  }
+
+  .winner {
+    text-align: center;
+  }
+
+  .restart {
+    background-color: black;
+    padding: .6rem 1.4rem;
+
+    margin: 0 auto 2rem auto;
+    max-width: fit-content;
+  }
+
+  svg {
+    fill: white;
+    width: 2rem;
+    height: auto;
+  }
+
+  .sliderContainer {
+    margin: 0 auto .4rem auto;
+    max-width: fit-content;
+
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+
+    #slider {
+      margin: 0 1rem;
+    }
+
+    p {
+      margin-bottom: 0;
+    }
+  }
+
+  .sliderVal {
+    text-align: center;
+  }
+}
+
+.col-2-content {
+
+  h1,
+  p {
+    max-width: 30rem;
+    padding: 0 1rem;
+  }
+
+  h1 {
+    margin: 5rem auto .6em auto;
+  }
+
+  p {
+    margin: 0 auto 1em auto;
+
+    a.button {
+      display: inline-block;
+    }
+
+  }
+}
