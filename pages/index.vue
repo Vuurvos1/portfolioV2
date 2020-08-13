@@ -130,8 +130,6 @@
         />
       </svg>
     </section>
-
-    <script src="/js/parallaxBlobs.js" defer></script>
   </main>
 </template>
 
@@ -162,6 +160,13 @@ export default {
           hid: "ogtitle",
           property: "og:title",
           content: "Home page",
+        },
+      ],
+      script: [
+        {
+          src: "/js/parallaxBlobs.js",
+          body: true,
+          defer: true,
         },
       ],
     };
