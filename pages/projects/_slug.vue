@@ -37,8 +37,6 @@
     <section class="col-2-content">
       <nuxt-content :document="article" />
     </section>
-
-    <script src="/js/partyPickle.js" defer></script>
   </main>
   <main v-else-if="article.title === 'Tic Tac Toe'" class="col-2 footer--var">
     <section class="ticTacToe">
@@ -88,8 +86,6 @@
     <section class="col-2-content">
       <nuxt-content :document="article" />
     </section>
-
-    <script src="/js/ticTacToe.js" defer></script>
   </main>
   <div v-else-if="article.title === 'C'">
     C

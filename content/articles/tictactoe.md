@@ -25,3 +25,5 @@ met de hoogste score.
 
 <a href="https://vuurvos1.github.io/tictactoe/" class="button button--live">Live</a>
 <a href="https://github.com/Vuurvos1/tictactoe" class="button button--code">Code</a>
+
+<script src="/js/ticTacToe.js" defer></script>

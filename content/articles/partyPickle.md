@@ -9,3 +9,5 @@ alt: Party pickle
 
 Party pickle is een online interactieve augurk en is te vergelijken met een tamagochi.
 Je kunt hem bijvoorbeeld eten en drinken geven.
+
+<script src="/js/partyPickle.js" defer></script>
