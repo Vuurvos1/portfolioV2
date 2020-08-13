@@ -43,12 +43,8 @@ export default {
         sizes: "16x16",
         href: "/favicon-16x16.png",
       },
-      { rel: "manifest", href: "//site.webmanifest" },
+      { rel: "manifest", href: "/site.webmanifest" },
 
-      //       <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
-      // <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-      // <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
-      // <link rel="manifest" href="/site.webmanifest"></link>
       {
         rel: "styleSheet",
         href:
@@ -73,15 +69,16 @@ export default {
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
-   */
-  components: true,
+   */ components: true,
   /*
    ** Nuxt.js dev-modules
    */
   buildModules: [
     // Doc: https://github.com/nuxt-community/eslint-module
     "@nuxtjs/eslint-module",
+    "@nuxtjs/google-analytics",
   ],
+
   /*
    ** Nuxt.js modules
    */
@@ -97,6 +94,15 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {},
+
+  // google analytics
+  googleAnalytics: {
+    id: "UA-140477855-1", // Used as fallback if no runtime config is provided
+    debug: {
+      enabled: true,
+      sendHitTask: true,
+    },
+  },
 
   styleResources: {
     scss: ["assets/scss/_variables.scss"],
