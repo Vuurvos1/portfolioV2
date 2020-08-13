@@ -9,6 +9,9 @@ export default {
    ** See https://nuxtjs.org/api/configuration-target
    */
   target: "static",
+  router: {
+    base: "/",
+  },
   /*
    ** Headers of the page
    ** See https://nuxtjs.org/api/configuration-head
@@ -98,10 +101,6 @@ export default {
   // google analytics
   googleAnalytics: {
     id: "UA-140477855-1", // Used as fallback if no runtime config is provided
-    debug: {
-      enabled: true,
-      sendHitTask: true,
-    },
   },
 
   styleResources: {
