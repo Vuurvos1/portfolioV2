@@ -57,5 +57,24 @@ export default {
       articles,
     };
   },
+
+  head() {
+    return {
+      title: "Projecten",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Hey, I’m Sam. I’m a Front end Developer currently studying Communication and multimedia design in Amsterdam. Apart from Front end development, I am also intrested things like game development, programming, and 3D modeling",
+        },
+        {
+          hid: "ogtitle",
+          property: "og:title",
+          content: "Project page",
+        },
+      ],
+    };
+  },
 };
 </script>

@@ -27,10 +27,10 @@
 
       <div class="knoppen">
         <div id="drink" class="button selectNone">
-          Geef Drinken
+          Give Juice
         </div>
         <div id="eten" class="button selectNone">
-          Geef Eten
+          Give Food
         </div>
       </div>
     </section>

@@ -7,7 +7,7 @@ alt: Drop the vase
 
 # Drop the vase
 
-Drop the Vase is een project van mij waarin ik vazen ontwerp in Blender en ze vervolgens een textuur geef gebaseerd op wiskunde.
+Drop the Vase is a project where I use Blender (the modeling software, not the kitchen appliance) where I try to generate vases as procedural as possible or with as little input as possible.
 
  <ul class="grid projects--grid">
     <li class="span-4">
