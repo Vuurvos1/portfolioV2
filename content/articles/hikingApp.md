@@ -12,5 +12,5 @@ Het idee voor deze app is ontstaan tijdens project Web waar we een applicatie he
 ![Three screenshots from the project web aplication](/img/projweb/projwebscreens1.png)
 ![Two screenshots from the project web aplication](/img/projweb/projwebscreens2.png)
 
-<a href="https://vuurvos1.github.io/projWeb/" class="button button--live">Live</a>
-<a href="https://github.com/Vuurvos1/projWeb" class="button button--code">Code</a>
+<a href="https://vuurvos1.github.io/FrontEndV2/" class="button button--live">Live</a>
+<a href="https://github.com/Vuurvos1/FrontEndV2" class="button button--code">Code</a>
