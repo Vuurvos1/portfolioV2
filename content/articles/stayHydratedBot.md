@@ -3,6 +3,7 @@ title: Stay hydrated bot
 description: De Twitch chat bot die je helpt met genoeg drinken
 img: /img/stayHydratedBot.png
 alt: Stay hydrated bot
+link: stayHydratedBot
 ---
 
 # Stay hydrated bot

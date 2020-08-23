@@ -3,6 +3,7 @@ title: Meal Match
 description: Dating app project
 img: /img/mealMatch.png
 alt: Meal Match
+link: mealMatch
 ---
 
 # Meal Match

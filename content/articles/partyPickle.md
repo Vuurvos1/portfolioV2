@@ -3,6 +3,7 @@ title: Party Pickle
 description: An interactive pickle that likes to party
 img: /img/partyPickle.png
 alt: Party pickle
+link: partyPickle
 ---
 
 # Party pickle

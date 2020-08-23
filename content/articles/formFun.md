@@ -3,6 +3,7 @@ title: Form fun
 description: Een stylesheed met styling voor form elementen
 img: /img/formFun.png
 alt: Form fun
+link: formFun
 ---
 
 # Form fun

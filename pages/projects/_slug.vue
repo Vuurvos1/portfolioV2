@@ -104,5 +104,37 @@ export default {
 
     return { article };
   },
+  head() {
+    return {
+      title: "this.article.description",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content: this.article.description,
+        },
+        {
+          hid: "ogtitle",
+          property: "og:title",
+          content: this.article.title,
+        },
+        {
+          hid: "ogurl",
+          property: "og:url",
+          content: `http://schelpkikker.nl/projects/${this.article.link}`,
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: `http://schelpkikker.nl${this.article.img}`,
+        },
+        {
+          hid: "keywords",
+          property: "keywords",
+          content: this.article.keywords ? this.article.keywords : "",
+        },
+      ],
+    };
+  },
 };
 </script>
