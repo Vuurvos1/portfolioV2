@@ -106,7 +106,7 @@ export default {
   },
   head() {
     return {
-      title: "this.article.description",
+      title: this.article.title,
       meta: [
         {
           hid: "description",
@@ -116,6 +116,11 @@ export default {
         {
           hid: "ogtitle",
           property: "og:title",
+          content: this.article.title,
+        },
+        {
+          hid: "ogdescription ",
+          property: "og:description ",
           content: this.article.title,
         },
         {

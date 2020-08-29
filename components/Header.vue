@@ -22,6 +22,7 @@
         </li>
       </ul>
     </nav>
+    <div id="swipeTrigger"></div>
   </header>
 </template>
 
