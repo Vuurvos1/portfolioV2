@@ -27,3 +27,17 @@
 </template>
 
 <style></style>
+
+<script>
+export default {
+  head: {
+    script: [
+      {
+        src: "/js/navSwipe.js",
+        body: true,
+        defer: true,
+      },
+    ],
+  },
+};
+</script>

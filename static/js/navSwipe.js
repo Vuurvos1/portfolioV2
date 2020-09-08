@@ -6,6 +6,7 @@ const menuToggle = document.querySelector(".menu__label");
 const menuCheckbox = document.querySelector("#toggleMenu");
 
 let touchStartX;
+let touchCloseX;
 let touchmoveX;
 let dragDist = null;
 
@@ -32,8 +33,6 @@ window.onresize = () => {
     window.innerWidth ||
     document.documentElement.clientWidth ||
     document.body.clientWidth;
-
-  console.log(`windowWidth: ${windowWidth}`);
 
   menuWidth = menuList.offsetWidth;
 
@@ -76,17 +75,20 @@ trigger.addEventListener(
 
     dragDist = touchStartX - touchmoveX;
 
+    menuList.style.transform = `translateX(${Math.max(
+      menuWidth + 32 - dragDist,
+      0
+    )}px)`;
+
     if (dragDist > 0 && dragDist < menuOpenDrag) {
-      menuOpen(false);
+      openMenu(false);
     }
   },
   false
 );
 
 // Swipe end
-trigger.addEventListener("touchend", (e) => {
-  console.log("touch end");
-  console.log(e);
+trigger.addEventListener("touchend", () => {
   if (dragDist < menuOpenDrag) {
     // close menu
     openMenu(false);
@@ -107,6 +109,32 @@ document.querySelector("body").addEventListener("click", (e) => {
 });
 
 // add swipe to close menu
+menuList.addEventListener(
+  "touchstart",
+  (e) => {
+    const firstTouch = e.touches[0] || e.originalEvent.touches[0]; // browser API
+    touchCloseX = firstTouch.clientX;
+  },
+  false
+);
+
+menuList.addEventListener(
+  "touchmove",
+  (e) => {
+    e.preventDefault();
+    touchmoveX = e.changedTouches[0].clientX;
+
+    dragDist = touchCloseX - touchmoveX;
+
+    menuList.style.transform = `translateX(${Math.max(-dragDist, 0)}px)`;
+    console.log(-dragDist);
+
+    if (-dragDist > 0 && -dragDist > menuOpenDrag) {
+      openMenu(false);
+    }
+  },
+  false
+);
 
 function openMenu(a) {
   // true is open menu, false is close menu

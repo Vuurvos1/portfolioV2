@@ -168,11 +168,6 @@ export default {
           body: true,
           defer: true,
         },
-        {
-          src: "/js/navSwipe.js",
-          body: true,
-          defer: true,
-        },
       ],
     };
   },
