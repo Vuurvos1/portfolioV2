@@ -1,0 +1,27 @@
+<!doctype html>
+<html data-n-head-ssr>
+  <head>
+    <title>Tic Tac Toe</title><meta data-n-head="ssr" charset="utf-8"><meta data-n-head="ssr" name="viewport" content="width=device-width,initial-scale=1"><meta data-n-head="ssr" data-hid="description" name="description" content="A tic tac toe ai with varien difficultie"><meta data-n-head="ssr" data-hid="ogtitle" property="og:title" content="Tic Tac Toe"><meta data-n-head="ssr" data-hid="ogdescription " property="og:description " content="Tic Tac Toe"><meta data-n-head="ssr" data-hid="ogurl" property="og:url" content="http://schelpkikker.nl/projects/tictactoe"><meta data-n-head="ssr" data-hid="og:image" property="og:image" content="http://schelpkikker.nl/img/moffelHip.png"><meta data-n-head="ssr" data-hid="keywords" property="keywords" content=""><base href="/"><link data-n-head="ssr" rel="icon" type="image/x-icon" href="/favicon.ico"><link data-n-head="ssr" rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link data-n-head="ssr" rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"><link data-n-head="ssr" rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link data-n-head="ssr" rel="manifest" href="/site.webmanifest"><link data-n-head="ssr" rel="styleSheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap"><link data-n-head="ssr" rel="styleSheet" href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap"><link rel="stylesheet" href="/_nuxt/css/2ec053a.css"><link rel="stylesheet" href="/_nuxt/css/3c9a1d2.css"><link rel="preload" href="/_nuxt/static/1614172292/projects/tictactoe/state.js" as="script"><link rel="preload" href="/_nuxt/static/1614172292/projects/tictactoe/payload.js" as="script"><link rel="preload" href="/_nuxt/static/1614172292/manifest.js" as="script">
+  </head>
+  <body>
+    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div><header><nav class="menu"><input id="toggleMenu" type="checkbox" tabindex="0"> <label for="toggleMenu" class="menu__label">
+      Menu
+      <svg viewBox="0 0 25 21"><rect x="0" y="0" width="25" height="3"></rect> <rect x="0" y="9" width="25" height="3"></rect> <rect x="0" y="18" width="25" height="3"></rect></svg></label> <ul class="menu__list"><li class="menu__item"><a href="/" class="nuxt-link-active">Home</a></li> <li class="menu__item"><a href="/projects" class="nuxt-link-active">Projects</a></li> <li class="menu__item"><a href="/contact">Contact</a></li></ul></nav> <div id="swipeTrigger"></div></header> <main class="col-2 footer--var"><section class="ticTacToe"><div class="ticTacToe__Grid"><div class="row"><div class="col"></div> <div class="col"></div> <div class="col"></div></div> <div class="row"><div class="col"></div> <div class="col"></div> <div class="col"></div></div> <div class="row"><div class="col"></div> <div class="col"></div> <div class="col"></div></div></div> <p class="winner heading5">.</p> <div class="restart"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M480.6 235.6c-11.3 0-20.4 9.1-20.4 20.4 0 112.6-91.6 204.2-204.2 204.2S51.8 368.6 51.8 256 143.4 51.8 256 51.8c61.5 0 118.5 27.1 157.1 73.7h-70.5c-11.3 0-20.4 9.1-20.4 20.4s9.1 20.4 20.4 20.4h114.6c11.3 0 20.4-9.1 20.4-20.4V31.4c0-11.3-9.1-20.4-20.4-20.4s-20.4 9.1-20.4 20.4v59C390.7 40.1 325.8 11 256 11 120.9 11 11 120.9 11 256s109.9 245 245 245 245-109.9 245-245c0-11.3-9.1-20.4-20.4-20.4z"></path></svg></div> <div class="sliderContainer"><p>makkelijk</p> <input id="slider" type="range" min="0" max="1" value="0.5" step="0.01" class="slider"> <p>moeilijk</p></div> <p class="sliderVal">50</p></section> <section class="col-2-content"><div class="nuxt-content"><h1 id="tic-tac-toe"><a aria-hidden="true" href="#tic-tac-toe" tabindex="-1"><span class="icon icon-link"></span></a>Tic Tac Toe</h1>
+<p>Voor dit project heb ik Boter Kaas en Eieren gemaakt met JavaScript om
+mijzelf uit te dagen. Maar ik had niemand om tegen te spelen daarom heb
+ik ook een robot gemaakt om tegen te spelen.</p>
+<p>Boter kaas en eieren heeft in het ergste geval 196839 (3^9) mogelijke
+manieren waarop het spel uitgespeeld kan worden. Dit lijkt misschien
+best veel, maar al deze mogelijke posities kunnen nog steeds binnen één
+seconde berekend worden.</p>
+<p>Door gebruik te maken van het minimax algoritme kijkt de computer naar
+alle mogelijke manieren waarop het spel verder gespeeld zou kunnen
+worden. Het algoritme kijkt dan naar alle scenario's waar de computer
+wint en geeft deze een score van +1, als hij verliest een score van -1
+en bij een gelijkspel een score van 0. Vervolgens kiest hij het scenario
+met de hoogste score.</p>
+<p><a href="https://vuurvos1.github.io/tictactoe/" class="button button--live">Live</a>
+<a href="https://github.com/Vuurvos1/tictactoe" class="button button--code">Code</a></p>
+<script src="/js/ticTacToe.js" defer></script></div></section></main> <footer><p>© 2020 - Sam de Kanter</p></footer></div></div></div><script defer src="/_nuxt/static/1614172292/projects/tictactoe/state.js"></script><script src="/_nuxt/b9df7c4.js" defer></script><script src="/_nuxt/81ebe97.js" defer></script><script src="/_nuxt/7994e37.js" defer></script><script src="/_nuxt/5d359b7.js" defer></script><script src="/_nuxt/3f6f06e.js" defer></script><script data-n-head="ssr" src="/js/navSwipe.js" data-body="true" defer></script><script data-n-head="ssr" src="/js/ticTacToe.js" data-body="true" defer></script>
+  </body>
+</html>
