@@ -1,7 +1,7 @@
 ---
 title: Tic Tac Toe
 description: A tic tac toe ai with varien difficultie
-img: /img/moffelHip.png
+img: /img/tictactoe.png
 alt: Tic tac toe
 link: tictactoe
 ---

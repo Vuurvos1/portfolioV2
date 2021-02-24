@@ -25,12 +25,8 @@
     <div class="eten"></div>
 
     <div class="knoppen">
-      <div id="drink" class="button selectNone">
-        Give Juice
-      </div>
-      <div id="eten" class="button selectNone">
-        Give Food
-      </div>
+      <div id="drink" class="button selectNone">Give Juice</div>
+      <div id="eten" class="button selectNone">Give Food</div>
     </div>
   </section>
 </template>

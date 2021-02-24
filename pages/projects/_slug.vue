@@ -13,9 +13,7 @@
       <nuxt-content :document="article" />
     </section>
   </main>
-  <div v-else-if="article.title === 'C'">
-    C
-  </div>
+  <div v-else-if="article.title === 'C'">C</div>
   <main v-else class="projectDesc">
     <article>
       <nuxt-content :document="article" />
