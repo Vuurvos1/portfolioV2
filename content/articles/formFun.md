@@ -14,3 +14,5 @@ Het is een work in progress open source project dus iedereen mag de code gebruik
 <a href="https://vuurvos1.github.io/FormFun/" class="button button--live">Live</a>
 <a href="https://github.com/Vuurvos1/FormFun" class="button button--code">Code</a>
 <icon-link href="https://github.com/Vuurvos1/FormFun" icon="launch">sapjes</icon-link>
+<icon-link href="https://github.com/Vuurvos1/FormFun" icon="github">sapjes</icon-link>
+<icon-link href="https://github.com/Vuurvos1/FormFun" icon="info">sapjes</icon-link>

@@ -17,7 +17,7 @@
 @import "partyPickle";
 
 body {
-  background-color: var(--white);
+  background-color: var(--background);
 }
 
 body,
@@ -56,5 +56,6 @@ main {
 
 /* Desktop */
 @media screen and (min-width: 64rem) {
-  .col-2 {}
+  .col-2 {
+  }
 }
