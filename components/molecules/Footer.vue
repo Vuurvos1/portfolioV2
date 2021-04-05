@@ -13,20 +13,40 @@
   </footer>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 footer {
-  background: none;
+  width: calc(100% - 3rem);
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: space-between;
 
-  max-width: calc(100vw / 12 * 6);
-  margin: 0 auto;
-  padding: 2rem 0;
+  margin: 0 1.5rem;
+  padding: 1.125rem 0;
   border-top: 1px solid #d9d9d9;
 
+  text-align: center;
+
   p {
-    padding: 0;
+    margin: 0;
+
+    &:first-child {
+      margin-bottom: 0.75rem;
+    }
+  }
+
+  // tablet
+  @media screen and (min-width: 48rem) {
+    width: auto;
+    max-width: calc(100vw / 8 * 6);
+    flex-direction: row;
+
+    margin: 0 auto;
+    padding: 2rem 0;
+  }
+
+  // dekstop
+  @media screen and (min-width: 64rem) {
+    max-width: calc(100vw / 12 * 8);
   }
 }
 </style>
