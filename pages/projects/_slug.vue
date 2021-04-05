@@ -1,19 +1,12 @@
 <template>
-  <main v-if="article.title === 'Party Pickle'" class="col-2 footer--var">
+  <main v-if="article.title === 'Party Pickle'" class="col-2">
     <PartyPickle />
 
     <section class="col-2-content">
       <nuxt-content :document="article" />
     </section>
   </main>
-  <main v-else-if="article.title === 'Tic Tac Toe'" class="col-2 footer--var">
-    <TicTacToe />
-
-    <section class="col-2-content">
-      <nuxt-content :document="article" />
-    </section>
-  </main>
-  <div v-else-if="article.title === 'C'">C</div>
+  <!-- <div v-else-if="article.title === 'C'">C</div> -->
   <main v-else class="projectDesc">
     <article>
       <nuxt-content :document="article" />
@@ -23,12 +16,10 @@
 
 <script>
 import PartyPickle from "~/components/PartyPickle.vue";
-import TicTacToe from "~/components/TicTacToe.vue";
 
 export default {
   components: {
     PartyPickle,
-    TicTacToe,
   },
   async asyncData({ $content, params }) {
     const article = await $content("articles", params.slug).fetch();

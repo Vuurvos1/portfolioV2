@@ -1,19 +1,17 @@
 <template>
   <div>
-    <Header></Header>
     <main>
+      <TicTacToe></TicTacToe>
       <IconLink :href="'pornhub.com'" icon="launch">sapjes</IconLink>
     </main>
-    <Footer></Footer>
   </div>
 </template>
 
 <script>
-import IconLink from "../../components/atoms/IconLink.vue";
-import Footer from "../../components/molecules/Footer.vue";
-import Header from "../../components/molecules/Header.vue";
+import IconLink from "~/components/atoms/IconLink.vue";
+import TicTacToe from "~/components/global/molecules/TicTacToe.vue";
 
 export default {
-  components: { IconLink, Footer, Header },
+  components: { IconLink, TicTacToe },
 };
 </script>

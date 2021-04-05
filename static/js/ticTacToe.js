@@ -4,14 +4,14 @@ let board = [
   ["", "", ""],
 ];
 
-let human = "X";
-let ai = "O";
+const human = "X";
+const ai = "O";
 
 let currentPlayer = human;
 
 //make board clickable
-for (let i = 0; i < document.querySelectorAll(".col").length; i++) {
-  document.querySelectorAll(".col")[i].addEventListener("click", playerClick);
+for (const i of document.querySelectorAll(".col")) {
+  i.addEventListener("click", playerClick);
 }
 
 //restart function
@@ -23,7 +23,7 @@ document.querySelector(".restart").addEventListener("click", () => {
   ];
 
   currentPlayer = human;
-  document.querySelector(".winner").innerHTML = ".";
+  document.querySelector(".winner").innerHTML = "Winner:";
 
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
@@ -59,11 +59,10 @@ function playerClick(e) {
           if (available.length > 0) {
             if (document.querySelector("#slider").value >= Math.random()) {
               // ai move
-              bestMove();
+              computerPick();
             } else {
               //random move
-              console.log("random");
-              //choose empty spot
+              // choose empty spot
               let spot =
                 available[Math.floor(Math.random() * available.length)];
 
@@ -141,31 +140,42 @@ function checkWinner(draw) {
   return winner;
 }
 
-function bestMove() {
-  let bestScore = -Infinity;
-  let move;
+let scores = {
+  O: 1,
+  X: -1,
+  tie: 0,
+};
 
+function computerPick() {
+  let bestScore = -Infinity;
+
+  let moves = [];
   for (let i = 0; i < 3; i++) {
     for (let j = 0; j < 3; j++) {
       if (board[i][j] == "") {
-        board[i][j] = ai;
-
-        let score = miniMax(board, 0, false);
-        // let score = minmax(board, 0, -Infinity, +Infinity, false);
-
-        board[i][j] = "";
-
-        if (score > bestScore) {
-          bestScore = score;
-          move = {
-            i,
-            j,
-          };
-        }
+        moves.push([i, j]);
       }
     }
   }
 
+  // randomize array for more diverse outcomes
+  moves.sort(() => 0.5 - Math.random());
+
+  for (const i of moves) {
+    board[i[0]][i[1]] = ai;
+    let score = alphaBetaMiniMax(board, 0, -Infinity, +Infinity, false);
+    board[i[0]][i[1]] = "";
+
+    if (score > bestScore) {
+      bestScore = score;
+      move = {
+        i: i[0],
+        j: i[1],
+      };
+    }
+  }
+
+  // draw best move
   board[move.i][move.j] = ai;
   document.querySelectorAll(".row")[move.i].children[move.j].innerHTML = ai;
 
@@ -174,48 +184,41 @@ function bestMove() {
   checkWinner(true);
 }
 
-let scores = {
-  O: 1,
-  X: -1,
-  tie: 0,
-};
-
-// var miniMaxChecks = 0;
-//60k
-
-function miniMax(board, depth, isMaximizing) {
+function alphaBetaMiniMax(board, depth, alpha, beta, isMaximizing) {
+  // alpha beta pruning seems to be 10x faster PogChamp
   let result = checkWinner(false);
   if (result !== null) {
     return scores[result];
   }
 
-  if (isMaximizing) {
-    let bestScore = -Infinity;
-    for (let i = 0; i < 3; i++) {
-      for (let j = 0; j < 3; j++) {
-        if (board[i][j] == "") {
-          board[i][j] = ai;
-          let score = miniMax(board, depth + 1, false);
-          board[i][j] = "";
+  let bestScore = isMaximizing ? -Infinity : +Infinity;
 
-          bestScore = Math.max(score, bestScore);
-        }
+  let moves = [];
+  for (let i = 0; i < 3; i++) {
+    for (let j = 0; j < 3; j++) {
+      if (board[i][j] == "") {
+        moves.push([i, j]);
       }
     }
-    return bestScore;
-  } else {
-    let bestScore = +Infinity;
-    for (let i = 0; i < 3; i++) {
-      for (let j = 0; j < 3; j++) {
-        if (board[i][j] == "") {
-          board[i][j] = human;
-          let score = miniMax(board, depth + 1, true);
-          board[i][j] = "";
-
-          bestScore = Math.min(score, bestScore);
-        }
-      }
-    }
-    return bestScore;
   }
+
+  for (const i of moves) {
+    board[i[0]][i[1]] = isMaximizing ? ai : human;
+    let score = alphaBetaMiniMax(board, depth + 1, alpha, beta, !isMaximizing);
+    board[i[0]][i[1]] = "";
+
+    if (isMaximizing) {
+      bestScore = Math.max(score, bestScore);
+      alpha = Math.max(alpha, score);
+    } else {
+      bestScore = Math.min(score, bestScore);
+      beta = Math.min(beta, score);
+    }
+
+    if (alpha >= beta) {
+      break;
+    }
+  }
+
+  return bestScore;
 }

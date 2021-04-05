@@ -1,6 +1,6 @@
 ---
 title: Tic Tac Toe
-description: A tic tac toe ai with varien difficultie
+description: A tic tac toe ai with varying difficultie
 img: /img/tictactoe.png
 alt: Tic tac toe
 link: tictactoe
@@ -17,6 +17,8 @@ manieren waarop het spel uitgespeeld kan worden. Dit lijkt misschien
 best veel, maar al deze mogelijke posities kunnen nog steeds binnen één
 seconde berekend worden.
 
+<tictactoe></tictactoe>
+
 Door gebruik te maken van het minimax algoritme kijkt de computer naar
 alle mogelijke manieren waarop het spel verder gespeeld zou kunnen
 worden. Het algoritme kijkt dan naar alle scenario's waar de computer
@@ -24,7 +26,8 @@ wint en geeft deze een score van +1, als hij verliest een score van -1
 en bij een gelijkspel een score van 0. Vervolgens kiest hij het scenario
 met de hoogste score.
 
-<a href="https://vuurvos1.github.io/tictactoe/" class="button button--live">Live</a>
-<a href="https://github.com/Vuurvos1/tictactoe" class="button button--code">Code</a>
+<icon-link href="https://github.com/Vuurvos1/tictactoe" icon="github">
+Source code
+</icon-link>
 
 <script src="/js/ticTacToe.js" defer></script>

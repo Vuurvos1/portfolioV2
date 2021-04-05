@@ -6,14 +6,10 @@
 @import "text";
 @import "input";
 
-@import "header";
-@import "footer";
-
 @import "home";
 @import "projIndex";
 @import "projectDesc";
 @import "contact";
-@import "tictactoe";
 @import "partyPickle";
 
 body {
@@ -56,6 +52,4 @@ main {
 
 /* Desktop */
 @media screen and (min-width: 64rem) {
-  .col-2 {
-  }
 }

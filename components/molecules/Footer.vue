@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <p>
+    <p class="body2">
       <a href="https://github.com/vuurvos1">GitHub</a> /
       <a href="https://codepen.io/Vuurvos">Codepen</a> /
       <a href="https://www.linkedin.com/in/sam-de-kanter-b3020b1a0/"
@@ -9,7 +9,7 @@
       /
       <a href="https://cssbattle.dev/player/vuurvos">CSS Battle</a>
     </p>
-    <p>&copy; 2021 - Sam de Kanter</p>
+    <p class="body2">&copy; 2021 - Sam de Kanter</p>
   </footer>
 </template>
 
