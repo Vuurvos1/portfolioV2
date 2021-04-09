@@ -51,6 +51,8 @@ export default {
       <p>moeilijk</p>
     </div>
     <p class="sliderVal">50</p>
+
+    <script src="/js/ticTacToe.js" defer></script>
   </section>
 </template>
 

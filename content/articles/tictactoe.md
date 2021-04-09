@@ -29,5 +29,3 @@ met de hoogste score.
 <icon-link href="https://github.com/Vuurvos1/tictactoe" icon="github">
 Source code
 </icon-link>
-
-<script src="/js/ticTacToe.js" defer></script>
