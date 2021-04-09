@@ -1,5 +1,7 @@
 <template>
   <main class="projects">
+    <TextInput :type="'textarea'"></TextInput>
+
     <section class="header">
       <h1>Projects</h1>
 
@@ -28,8 +30,9 @@
 
 <script>
 import PostItem from "../../components/atoms/PostItem.vue";
+import TextInput from "../../components/atoms/TextInput.vue";
 export default {
-  components: { PostItem },
+  components: { PostItem, TextInput },
   async asyncData({ $content, params }) {
     const articles = await $content("articles", params.slug)
       .only(["title", "description", "img", "slug"])

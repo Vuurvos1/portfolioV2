@@ -27,11 +27,6 @@ export default {
         />
       </svg>
     </div>
-
-    <div>
-      <img src="" alt="" />
-      <h3>{{ title }}</h3>
-    </div>
   </NuxtLink>
 </template>
 

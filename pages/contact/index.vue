@@ -8,38 +8,24 @@
         method="post"
         class="width-4/9"
       >
-        <div class="textInput--container">
-          <input
-            id="firstname"
-            type="text"
-            name="firstname"
-            placeholder="Your Name"
-            required
-          />
-          <label for="firstname">Your Name</label>
-        </div>
-
-        <div class="textInput--container">
-          <input
-            id="emailadres"
-            type="email"
-            name="emailadres"
-            placeholder="Your Email Adress"
-            required
-          />
-          <label for="emailadres">Your Email Adress</label>
-        </div>
-
-        <div class="textInput--container textInput--large">
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            placeholder="Leave a Message"
-            required
-          ></textarea>
-          <label for="message">Leave a Message</label>
-        </div>
+        <TextInput
+          :type="'text'"
+          label="Your name"
+          name="firstname"
+          :req="true"
+        ></TextInput>
+        <TextInput
+          :type="'email'"
+          label="Your email address"
+          name="emailaddress"
+          :req="true"
+        ></TextInput>
+        <TextInput
+          :type="'textarea'"
+          label="Leave a message"
+          name="message"
+          :req="true"
+        ></TextInput>
 
         <button id="submitbutton" type="submit" class="button">
           Send Message
@@ -87,7 +73,9 @@
 </template>
 
 <script>
+import TextInput from "../../components/atoms/TextInput.vue";
 export default {
+  components: { TextInput },
   layout: "contactLayout",
   head() {
     return {
