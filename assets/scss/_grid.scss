@@ -1,8 +1,13 @@
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 1.5rem;
-  margin: 0 0.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  max-width: 128rem;
 }
 
 .grid--inner {
@@ -36,15 +41,15 @@
 }
 
 .span-4 {
-  grid-column: span 4;
+  grid-column: span 2;
 }
 
 .width-3\/10 {
-  grid-column: span 4;
+  grid-column: span 2;
 }
 
 .width-7\/12 {
-  grid-column: span 4;
+  grid-column: span 2;
 }
 
 /* Tablet */
@@ -58,7 +63,7 @@
   }
 
   .width-3\/10 {
-    grid-column: 1 / 9;
+    grid-column: 2 / 8;
   }
 
   .width-7\/12 {

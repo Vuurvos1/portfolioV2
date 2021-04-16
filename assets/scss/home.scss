@@ -1,44 +1,38 @@
 .homePage {
   max-width: initial;
   overflow-x: hidden;
-  padding: 0 .75rem;
 
   &__about {
-    max-width: 100rem;
     margin: 6rem auto 4rem auto;
     position: relative;
-
-    h1 {
-      font-size: 3.0625rem;
-    }
 
     .scroll {
       text-align: center;
       position: relative;
       margin: 0 auto;
-      color: var(--black);
+      color: var(--text);
 
       &::before {
-        content: '';
+        content: "";
         position: absolute;
-        background-color: var(--black);
+        background-color: currentColor;
 
-        width: 100%;
-        height: 2px;
+        width: 150%;
+        height: 1px;
 
         border-radius: 1rem;
-        transition: all .2s ease;
+        transition: all 0.2s ease-out;
 
-        left: 0;
-        bottom: -.2rem;
+        left: -22.5%;
+        bottom: -0.3rem;
       }
 
       @include hocus() {
         outline: none;
 
         &::before {
-          transform: translateX(-15%);
-          width: 140%;
+          transform: translateX(-12.5%);
+          width: 200%;
         }
       }
     }
@@ -48,7 +42,7 @@
     .svg2 {
       z-index: -1;
       position: absolute;
-      transition: all .1 ease-out;
+      transition: all 0.1 ease-out;
     }
 
     .svg1 {
@@ -56,7 +50,7 @@
       left: 0;
       transform: translateX(-60px);
 
-      fill: var(--col-secondary)
+      fill: var(--col-secondary);
     }
 
     .svg2 {
@@ -64,13 +58,13 @@
       right: 0;
       transform: translateX(210px);
 
-      fill: var(--col-primary)
+      fill: var(--col-primary);
     }
   }
 
   &__about2 {
     position: relative;
-    max-width: 100rem;
+    // max-width: 100rem;
     margin: 0 auto 10rem auto;
     padding-top: 4rem;
 
@@ -79,7 +73,7 @@
     .svg4 {
       z-index: -1;
       position: absolute;
-      transition: all .1 ease-out;
+      transition: all 0.1 ease-out;
     }
 
     .svg3 {
@@ -87,34 +81,32 @@
       left: 0;
       transform: translateX(-51px);
 
-      fill: var(--col-secondary-var)
+      fill: var(--col-secondary-var);
     }
 
     .svg4 {
       display: none;
 
-      fill: var(--col-secondary)
+      fill: var(--col-secondary);
     }
   }
 
   &__projects {
-    margin: 0 auto 14rem auto;
-    max-width: 100rem;
+    margin-bottom: 14rem;
 
-    .heading3 {
-      font-size: 1.5rem;
-      color: var(--black);
-
+    .moreProjects {
       display: flex;
       flex-direction: row;
       justify-content: center;
       align-items: baseline;
 
+      margin-left: auto;
+
       svg {
-        height: 1.5rem;
+        height: 0.8em;
         width: auto;
         margin-left: 1rem;
-        fill: var(--black);
+        fill: currentColor;
       }
     }
   }
@@ -122,8 +114,6 @@
   &__contact {
     position: relative;
     padding-bottom: 18rem;
-    margin: 0 auto;
-    max-width: 100rem;
 
     .button {
       width: fit-content;
@@ -133,7 +123,7 @@
     .svg5 {
       z-index: -1;
       position: absolute;
-      transition: all .1 ease-out;
+      transition: all 0.1 ease-out;
     }
 
     .svg5 {
@@ -147,7 +137,6 @@
     }
   }
 }
-
 
 /* Tablet */
 @media screen and (min-width: 48rem) {
@@ -168,7 +157,6 @@
       .svg2 {
         top: -160px;
         transform: translateX(-100px);
-
       }
     }
 
@@ -188,23 +176,32 @@
 
         top: 110px;
         right: 0;
-        transform: translateX(80px)
+        transform: translateX(80px);
       }
     }
 
-    &__projects {
-      .heading3 {
-        font-size: 2.1875rem;
-      }
+    // &__projects {
+    //   // ul {
+    //   //   svg {
 
-      svg {
-        height: 2.1875rem;
-      }
+    //   //   }
+    //   // }
 
-    }
+    //   a {
+    //     // display: flex;
+    //     // flex-direction: row;
+    //     // align-items: center;
+    //     // margin-left: auto;
+
+    //     // svg {
+    //     //   height: 0.8em;
+    //     //   fill: currentColor;
+    //     // }
+    //   }
+    // }
   }
 }
 
-
 // desktop
-@media screen and (min-width: 64rem) {}
+@media screen and (min-width: 64rem) {
+}

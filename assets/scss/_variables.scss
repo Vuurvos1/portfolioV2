@@ -12,7 +12,8 @@
 
   --col-surface: #ffffff;
 
-  --text-col: var(--black);
+  --text-col: #111517;
+  --text: var(--text-col);
 
   --col-error: #b00020;
 
@@ -35,6 +36,7 @@
 
     --background: #0d1117;
     --text-col: var(--white);
+    --text: var(--white);
   }
 }
 

@@ -116,7 +116,7 @@ div {
     outline: 0;
     padding: 1rem 0.8rem;
     width: 100%;
-    background: none;
+    background: var(--white);
 
     color: rgba(0, 0, 0, 0.6);
     border-radius: 0.25rem;
