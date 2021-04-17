@@ -13,7 +13,7 @@ export default {
   <NuxtLink :to="{ name: 'projects-slug', params: { slug: article.slug } }">
     <img :src="article.img" />
     <div class="projects__text">
-      <h2>{{ article.title }}</h2>
+      <h2 class="heading3">{{ article.title }}</h2>
       <svg
         width="49"
         height="32"
@@ -30,4 +30,12 @@ export default {
   </NuxtLink>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+h2 {
+  text-shadow: rgba(30, 30, 30, 0.5) 0px 0px 0.5rem;
+}
+
+svg {
+  height: 1.6em;
+}
+</style>

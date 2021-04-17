@@ -45,15 +45,15 @@ export default {
   <main class="homePage">
     <section class="grid homePage__about">
       <h1 class="heading2 width-3/10">
-        Hey, I’m Sam.
-        <span>I’m</span>
-        <span>a</span>
-        <span>front</span>
-        <span>end</span>
-        <span>developer</span>
-        <span>creating</span>
-        <span>digital</span>
-        <span>experiences</span>
+        <span class="mask"><span>Hey, I’m Sam.</span></span>
+        <span class="mask" style="--order: 1"><span>I’m</span></span>
+        <span class="mask" style="--order: 2"><span>a</span></span>
+        <span class="mask" style="--order: 3"><span>front</span></span>
+        <span class="mask" style="--order: 4"><span>end</span></span>
+        <span class="mask" style="--order: 5"><span>developer</span></span>
+        <span class="mask" style="--order: 6"><span>creating</span></span>
+        <span class="mask" style="--order: 7"><span>digital</span></span>
+        <span class="mask" style="--order: 8"><span>experiences</span></span>
       </h1>
 
       <a class="scroll width-3/10" href="#whatIdo">scroll</a>
@@ -165,6 +165,23 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.homePage__about {
+  span {
+    display: inline-block;
+  }
+
+  .mask {
+    overflow: hidden;
+
+    &:nth-child(n + 2) span {
+      transform: translateY(3em);
+
+      animation: dropIn 1s ease forwards;
+      animation-delay: calc(var(--order) * 100ms);
+    }
+  }
+}
+
 .highlighted {
   display: grid;
   grid-template-columns: 1fr;
@@ -172,6 +189,15 @@ export default {
 
   @media screen and (min-width: 48rem) {
     grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@keyframes dropIn {
+  from {
+    transform: translateY(3em);
+  }
+  to {
+    transform: translateY(0);
   }
 }
 </style>
