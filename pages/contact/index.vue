@@ -1,23 +1,99 @@
+<script>
+import TextInput from "../../components/atoms/TextInput.vue";
+
+export default {
+  components: { TextInput },
+  layout: "contactLayout",
+  mounted() {
+    // TO DO ADD CAPATCHA SPAM PROTECTION
+    // spam protection
+    // const recaptchaScript = document.createElement("script");
+    // recaptchaScript.setAttribute(
+    //   "src",
+    //   "https://www.google.com/recaptcha/api.js?render=6LfoMq4aAAAAAPrkUlaKl6lGM1mUV_WXSUxsv8Za"
+    // );
+    // document.head.appendChild(recaptchaScript);
+
+    // grecaptcha.ready(function () {
+    //   grecaptcha
+    //     .execute("YOUR_SITE_KEY", { action: "homepage" })
+    //     .then(function (token) {
+    //       document.getElementById("captchaResponse").value = token;
+    //     });
+    // });
+
+    // form submit logic
+    const formEl = document.querySelector("#contactForm");
+    formEl.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const name = document.querySelector("#name");
+      const mail = document.querySelector("#email");
+      const msg = document.querySelector("#message");
+
+      const formData = new FormData(formEl);
+
+      formData.append("name", name.value);
+      formData.append("email", mail.value);
+      formData.append("message", msg.value);
+
+      const data = new URLSearchParams(formData);
+
+      // console.log(data);
+
+      fetch("https://getform.io/f/7269afe1-d68e-4ecd-9138-b939abb663dc", {
+        method: "POST",
+        body: data,
+      });
+
+      name.value = "";
+      mail.value = "";
+      msg.value = "";
+
+      console.log("submitted form");
+    });
+  },
+  head() {
+    return {
+      title: "Contact Page",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Find some info about me to find me on different platforms, or contact me if you have any questions",
+        },
+        {
+          hid: "ogtitle",
+          property: "og:title",
+          content: "Contact page",
+        },
+      ],
+    };
+  },
+};
+</script>
+
 <template>
   <main class="contactPage">
     <section class="grid contactPage__form">
       <h1 class="width-4/9">Let’s get in contact</h1>
 
       <form
-        action="mailto:samdepanter@gmail.com?subject=Portfolio"
-        method="post"
+        id="contactForm"
+        action="https://getform.io/f/7269afe1-d68e-4ecd-9138-b939abb663dc"
+        method="POST"
         class="width-4/9"
       >
         <TextInput
           :type="'text'"
           label="Your name"
-          name="firstname"
+          name="name"
           :req="true"
         ></TextInput>
         <TextInput
           :type="'email'"
           label="Your email address"
-          name="emailaddress"
+          name="email"
           :req="true"
         ></TextInput>
         <TextInput
@@ -27,10 +103,24 @@
           :req="true"
         ></TextInput>
 
+        <!-- <input id="captchaResponse" type="hidden" name="g-recaptcha-response" /> -->
+
         <button id="submitbutton" type="submit" class="button">
           Send Message
         </button>
       </form>
+
+      <!-- <script>
+        grecaptcha.ready(function () {
+          grecaptcha
+            .execute("6LfoMq4aAAAAAPrkUlaKl6lGM1mUV_WXSUxsv8Za", {
+              action: "homepage",
+            })
+            .then(function (token) {
+              document.getElementById("captchaResponse").value = token;
+            });
+        });
+      </script> -->
     </section>
 
     <section class="grid contactPage__social">
@@ -72,28 +162,4 @@
   </main>
 </template>
 
-<script>
-import TextInput from "../../components/atoms/TextInput.vue";
-export default {
-  components: { TextInput },
-  layout: "contactLayout",
-  head() {
-    return {
-      title: "Contact Page",
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content:
-            "Find some info about me to find me on different platforms, or contact me if you have any questions",
-        },
-        {
-          hid: "ogtitle",
-          property: "og:title",
-          content: "Contact page",
-        },
-      ],
-    };
-  },
-};
-</script>
+<style lang="scss" scoped></style>

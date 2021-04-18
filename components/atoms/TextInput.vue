@@ -29,6 +29,7 @@ export default {
   <div>
     <textarea
       v-if="type == 'textarea'"
+      :id="name"
       :placeholder="label"
       :rows="rows"
       :required="req"
@@ -37,7 +38,7 @@ export default {
       v-else
       :id="name"
       :placeholder="label"
-      :type="text"
+      :type="type"
       :required="req"
     />
     <label :for="name">{{ label }}</label>
