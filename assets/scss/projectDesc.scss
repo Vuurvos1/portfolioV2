@@ -4,27 +4,18 @@
 
   article {
     padding-top: 4rem;
-    margin: 0 auto;
-    max-width: 100rem;
 
+    p,
     h1,
     h2,
     h3,
     h4,
     h5 {
-      max-width: 30rem;
-      margin: 0 auto 0.6em auto;
-      padding: 0 1.5rem;
+      margin-bottom: 1em;
     }
 
-    p {
-      max-width: 30rem;
-      margin: 0 auto 1em auto;
-      padding: 0 1.5rem;
-
-      a {
-        display: initial;
-      }
+    p a {
+      display: initial;
     }
 
     a.button {
@@ -61,18 +52,17 @@
 /* Tablet */
 @media screen and (min-width: 48rem) {
   .projectDesc article {
-    img {
-      width: 140%;
-      margin-left: -20%;
-    }
-
-    p {
-      max-width: 30rem;
+    p,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+      padding-left: 0;
+      padding-right: 0;
     }
 
     ul.projects--grid {
-      max-width: 50rem;
-
       img {
         width: 100%;
         margin-left: 0;

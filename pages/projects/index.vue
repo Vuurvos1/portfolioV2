@@ -36,15 +36,15 @@ export default {
 
 <template>
   <main class="grid projects">
-    <h1 class="width-3/10 heading2">Projects</h1>
+    <h1 class="width-3/10 heading3 titleSide">Projects</h1>
 
     <ul class="width-3/10 projects__grid">
       <li
-        v-for="article of articles"
+        v-for="(article, index) of articles"
         :key="article.slug"
         class="projects__item"
       >
-        <PostItem :article="article" />
+        <PostItem :article="article" :loadlazy="index >= 4" />
       </li>
     </ul>
   </main>
@@ -54,6 +54,20 @@ export default {
 .projects {
   margin-top: 3rem;
   margin-bottom: 3rem;
+
+  .titleSide {
+    grid-column: span 2;
+
+    @media screen and (min-width: 48rem) {
+      grid-column: 1;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+    }
+
+    @media screen and (min-width: 64rem) {
+      grid-column: 2;
+    }
+  }
 
   &__grid {
     display: grid;

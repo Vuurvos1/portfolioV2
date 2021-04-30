@@ -116,7 +116,7 @@ export default {
     </section>
 
     <section class="grid homePage__projects">
-      <h2 class="width-3/10">Featured projects</h2>
+      <h2 class="heading5 titleSide">Recent projects</h2>
 
       <ul class="width-3/10 highlighted">
         <li
@@ -129,7 +129,7 @@ export default {
       </ul>
 
       <a class="width-3/10 heading5 moreProjects" href="/projects"
-        >Explore more projects
+        >Explore projects
         <svg
           width="49"
           height="32"
@@ -165,6 +165,24 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+.homePage {
+  &__projects {
+    .titleSide {
+      grid-column: span 2;
+
+      @media screen and (min-width: 48rem) {
+        grid-column: 1;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+      }
+
+      @media screen and (min-width: 64rem) {
+        grid-column: 2;
+      }
+    }
+  }
+}
+
 .homePage__about {
   span {
     display: inline-block;

@@ -17,7 +17,7 @@ manieren waarop het spel uitgespeeld kan worden. Dit lijkt misschien
 best veel, maar al deze mogelijke posities kunnen nog steeds binnen één
 seconde berekend worden.
 
-<tictactoe></tictactoe>
+<tic-tac-toe></tic-tac-toe>
 
 Door gebruik te maken van het minimax algoritme kijkt de computer naar
 alle mogelijke manieren waarop het spel verder gespeeld zou kunnen

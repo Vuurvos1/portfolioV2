@@ -140,8 +140,8 @@ export default {
   }
 
   @media screen and (min-width: 48rem) {
-    width: calc((100vw - (100vw - 100%)) / 12 * 6);
-    max-width: 40rem;
+    // width: calc((100vw - (100vw - 100%)) / 12 * 6);
+    // max-width: 40rem;
     margin: 2rem auto;
   }
 }

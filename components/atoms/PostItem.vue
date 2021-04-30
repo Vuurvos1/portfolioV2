@@ -5,13 +5,22 @@ export default {
       type: Object,
       default: () => {},
     },
+    loadlazy: {
+      type: Boolean,
+      default: false,
+    },
   },
 };
 </script>
 
 <template>
   <NuxtLink :to="{ name: 'projects-slug', params: { slug: article.slug } }">
-    <img :src="article.img" />
+    <img
+      width="512"
+      height="512"
+      :loading="loadlazy ? 'lazy' : null"
+      :src="article.img"
+    />
     <div class="projects__text">
       <h2 class="heading3">{{ article.title }}</h2>
       <svg

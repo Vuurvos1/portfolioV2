@@ -1,19 +1,3 @@
-<template>
-  <main v-if="article.title === 'Party Pickle'" class="col-2">
-    <PartyPickle />
-
-    <section class="col-2-content">
-      <nuxt-content :document="article" />
-    </section>
-  </main>
-  <!-- <div v-else-if="article.title === 'C'">C</div> -->
-  <main v-else class="projectDesc">
-    <article>
-      <nuxt-content :document="article" />
-    </article>
-  </main>
-</template>
-
 <script>
 import PartyPickle from "~/components/PartyPickle.vue";
 
@@ -66,3 +50,18 @@ export default {
   },
 };
 </script>
+
+<template>
+  <main v-if="article.title === 'Party Pickle'" class="col-2">
+    <PartyPickle />
+
+    <section class="col-2-content">
+      <nuxt-content :document="article" />
+    </section>
+  </main>
+  <main v-else class="projectDesc grid">
+    <article class="width-4/9">
+      <nuxt-content :document="article" />
+    </article>
+  </main>
+</template>
