@@ -1,4 +1,4 @@
-var screenW = window.innerWidth;
+// var screenW = window.innerWidth;
 
 var drainUpdateTime = 100; //ms
 var vloeistofLevel = 300;

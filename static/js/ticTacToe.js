@@ -160,6 +160,7 @@ function computerPick() {
 
   // randomize array for more diverse outcomes
   moves.sort(() => 0.5 - Math.random());
+  let move = {};
 
   for (const i of moves) {
     board[i[0]][i[1]] = ai;
