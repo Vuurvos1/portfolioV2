@@ -4,6 +4,7 @@ description: Dating app project
 img: /img/mealMatch.png
 alt: Meal Match
 link: mealMatch
+createdAt: 2020-06-22T00:00:00+0000
 ---
 
 # Meal Match
@@ -28,5 +29,10 @@ And is build using:
 
 ![Screenshot form the homepage of the Meal Match app](/img/mealMatch/mealMatchLogin.png)
 
-<a href="https://moffelmatch.herokuapp.com/" class="button button--live">Live</a>
-<a href="https://github.com/vuurvos1/projecttechgroup" class="button button--code">Code</a>
+<icon-link href="https://github.com/vuurvos1/projecttechgroup" target="_blank" icon="github">
+Source code
+</icon-link>
+
+<icon-link href="https://moffelmatch.herokuapp.com" target="_blank" icon="launch">
+See it live
+</icon-link>

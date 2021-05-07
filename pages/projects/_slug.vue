@@ -1,13 +1,7 @@
 <script>
-import PartyPickle from "~/components/PartyPickle.vue";
-
 export default {
-  components: {
-    PartyPickle,
-  },
   async asyncData({ $content, params }) {
     const article = await $content("articles", params.slug).fetch();
-
     return { article };
   },
 
@@ -52,15 +46,8 @@ export default {
 </script>
 
 <template>
-  <main v-if="article.title === 'Party Pickle'" class="col-2">
-    <PartyPickle />
-
-    <section class="col-2-content">
-      <nuxt-content :document="article" />
-    </section>
-  </main>
-  <main v-else class="projectDesc grid">
-    <article class="width-4/9">
+  <main class="projectDesc grid">
+    <article class="width-4/9 article">
       <nuxt-content :document="article" />
     </article>
   </main>

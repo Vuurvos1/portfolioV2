@@ -7,17 +7,12 @@
 }
 
 .selectNone {
-  /*    No text select*/
+  /* No text select*/
   -webkit-touch-callout: none;
-  /* iOS Safari */
   -webkit-user-select: none;
-  /* Safari */
   -khtml-user-select: none;
-  /* Konqueror HTML */
   -moz-user-select: none;
-  /* Firefox */
   -ms-user-select: none;
-  /* Internet Explorer/Edge */
   user-select: none;
 }
 
@@ -31,6 +26,8 @@
     position: absolute;
     top: 83px;
     left: 85px;
+
+    width: auto;
 
     cursor: pointer;
 
@@ -60,12 +57,11 @@
     height: 300px;
     width: 276px;
     bottom: 24vh;
-    background-color: #919B54;
+    background-color: #919b54;
     z-index: -1;
 
     border-radius: 0 0 22px 22px;
   }
-
 
   .knoppen {
     display: block;
@@ -96,16 +92,11 @@
   }
 }
 
-
-
-
-
-
 .deksel {
   width: 210px;
   height: 40px;
   margin: 0 auto;
-  background-color: #A5A5A5;
+  background-color: #a5a5a5;
   position: absolute;
   left: 0;
   right: 0;
@@ -161,7 +152,6 @@
   animation-duration: 3.2s;
 }
 
-
 @keyframes dekselAn {
   0% {
     -webkit-transform: translate(0, 0);
@@ -192,7 +182,6 @@
     -webkit-transform: rotate(-90deg);
   }
 }
-
 
 @keyframes dekselAnClose {
   0% {

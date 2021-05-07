@@ -9,8 +9,8 @@ const blob4Trans = getTranslateValues(blob4);
 const blob5 = document.querySelector(".svg5");
 const blob5Trans = getTranslateValues(blob5);
 
-console.log(getTranslateValues(blob1));
-console.log(blob3Trans);
+// console.log(getTranslateValues(blob1));
+// console.log(blob3Trans);
 
 let value = 0;
 

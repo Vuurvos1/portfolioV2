@@ -20,6 +20,7 @@ export default {
       height="512"
       :loading="loadlazy ? 'lazy' : null"
       :src="article.img"
+      :alt="article.alt"
     />
     <div class="projects__text">
       <h2 class="heading3">{{ article.title }}</h2>
@@ -40,11 +41,70 @@ export default {
 </template>
 
 <style lang="scss" scoped>
+@import "~assets/scss/mixins";
+
 h2 {
   text-shadow: rgba(30, 30, 30, 0.5) 0px 0px 0.5rem;
 }
 
 svg {
   height: 1.6em;
+}
+
+img {
+  width: 100%;
+  height: auto;
+
+  transition: all 0.2s ease-out;
+}
+
+h2 {
+  color: var(--white);
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 0;
+  transition: all 0.2s ease-out;
+
+  transform: translateY(0);
+}
+
+svg {
+  position: absolute;
+  bottom: 0;
+
+  transition: all 0.2s ease-out;
+
+  opacity: 0;
+  transform: translateY(1.6rem);
+
+  path {
+    fill: var(--white);
+  }
+}
+
+.projects__text {
+  position: absolute;
+
+  bottom: 2rem;
+  left: 2rem;
+  right: 2rem;
+}
+
+a {
+  outline: none;
+  @include hocus() {
+    h2 {
+      transform: translateY(-0.8em);
+    }
+
+    img {
+      transform: scale(1.1);
+    }
+
+    svg {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
 }
 </style>

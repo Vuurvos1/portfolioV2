@@ -127,7 +127,7 @@ menuList.addEventListener(
     dragDist = touchCloseX - touchmoveX;
 
     menuList.style.transform = `translateX(${Math.max(-dragDist, 0)}px)`;
-    console.log(-dragDist);
+    // console.log(-dragDist);
 
     if (-dragDist > 0 && -dragDist > menuOpenDrag) {
       openMenu(false);

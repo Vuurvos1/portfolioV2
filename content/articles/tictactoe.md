@@ -26,6 +26,6 @@ wint en geeft deze een score van +1, als hij verliest een score van -1
 en bij een gelijkspel een score van 0. Vervolgens kiest hij het scenario
 met de hoogste score.
 
-<icon-link href="https://github.com/Vuurvos1/tictactoe" icon="github">
+<icon-link href="https://github.com/Vuurvos1/tictactoe" target="_blank" icon="github">
 Source code
 </icon-link>

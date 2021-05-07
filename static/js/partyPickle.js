@@ -76,7 +76,7 @@ setInterval(vloeistof, drainUpdateTime);
 //Water Refill mechanic
 function waterTimout() {
   refillActive = true;
-  console.log(refillActive);
+  // console.log(refillActive);
 }
 
 function addWater() {
@@ -90,7 +90,7 @@ function addWater() {
       vloeistofLevel = 300;
       refillActive = false;
       setTimeout(waterTimout, 1000);
-      console.log("vol");
+      // console.log("vol");
     }
   }
 }
@@ -106,7 +106,7 @@ function clearTouches() {
 function potKapot() {
   touches++;
   if (touches > 25) {
-    console.log("kapot");
+    // console.log("kapot");
     document.querySelector("img.jar").src = "/img/partyPickle/jarKapot.png";
     drainSpeed = 1;
   }
