@@ -128,7 +128,7 @@ export default {
         </li>
       </ul>
 
-      <a class="width-3/10 heading5 moreProjects" href="/projects"
+      <a class="width-3/10 heading6 moreProjects" href="/projects"
         >Explore projects
         <svg
           width="49"
@@ -179,6 +179,14 @@ export default {
       @media screen and (min-width: 64rem) {
         grid-column: 2;
       }
+    }
+
+    .moreProjects {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      margin-top: 1ch;
     }
   }
 }
