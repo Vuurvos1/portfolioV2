@@ -76,16 +76,15 @@ header {
       }
 
       ~ label svg {
-        .line:nth-child(2) {
+        .line:nth-of-type(1) {
           transform-origin: 0 0;
           transform: rotate(45deg) translate(5px, -7px);
         }
-        .line:nth-child(3) {
+        .line:nth-of-type(2) {
           opacity: 0;
           transform-origin: 50%;
-          transform: rotate(-45deg);
         }
-        .line:nth-child(4) {
+        .line:nth-of-type(3) {
           transform-origin: 0 0;
           transform: rotate(-45deg) translate(-12px, 0px);
         }
