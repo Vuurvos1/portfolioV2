@@ -22,6 +22,8 @@
   min-height: 42rem;
   overflow-x: hidden;
 
+  margin-top: 2rem;
+
   .pickle {
     position: absolute;
     top: 83px;
@@ -101,18 +103,13 @@
 
   transform-origin: 0% 100%;
 
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  -o-transition: all 0.5s ease-in-out;
-  -ms-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-
   animation-fill-mode: forwards;
 }
 
 .dekselAnimate {
   animation-name: dekselAn;
-  animation-duration: 4s;
+  animation-duration: 2s;
 }
 
 .dekselAnimateClose {
@@ -121,12 +118,7 @@
 }
 
 .dekselOpen {
-  -webkit-transform: translate(-70px, -100px);
-  -moz-transform: translate(-70px, -100px);
-  -ms-transform: translate(-70px, -100px);
-  -o-transform: translate(-70px, -100px);
-  transform: translate(-70px, -100px);
-  -webkit-transform: rotate(-90deg);
+  @include transform(rotate(-90deg));
 }
 
 .eten {
@@ -136,10 +128,6 @@
   top: -50px;
   left: 50%;
 
-  -webkit-transition: all 0.3s ease-out;
-  -moz-transition: all 0.3s ease-out;
-  -o-transition: all 0.3s ease-out;
-  -ms-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
 
@@ -150,63 +138,29 @@
 
 @keyframes dekselAn {
   0% {
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0);
-  }
-
-  25% {
-    -webkit-transform: translate(0px, -100px);
-    -moz-transform: translate(0px, -100px);
-    -ms-transform: translate(0px, -100px);
-    -o-transform: translate(0px, -100px);
-    transform: translate(0px, -100px);
+    @include transform(translate(0, 0));
   }
 
   50% {
-    -webkit-transform: rotate(-90deg);
+    @include transform(translate(0px, -100px));
   }
 
   100% {
-    -webkit-transform: translate(-70px, -100px);
-    -moz-transform: translate(-70px, -100px);
-    -ms-transform: translate(-70px, -100px);
-    -o-transform: translate(-70px, -100px);
-    transform: translate(-70px, -100px);
-    -webkit-transform: rotate(-90deg);
+    @include transform(rotate(-90deg));
   }
 }
 
 @keyframes dekselAnClose {
   0% {
-    -webkit-transform: translate(-70px, -100px);
-    -moz-transform: translate(-70px, -100px);
-    -ms-transform: translate(-70px, -100px);
-    -o-transform: translate(-70px, -100px);
-    transform: translate(-70px, -100px);
-    -webkit-transform: rotate(-90deg);
-  }
-
-  20% {
-    -webkit-transform: rotate(-90deg);
+    @include transform(rotate(-90deg));
   }
 
   60% {
-    -webkit-transform: translate(0px, -100px);
-    -moz-transform: translate(0px, -100px);
-    -ms-transform: translate(0px, -100px);
-    -o-transform: translate(0px, -100px);
-    transform: translate(0px, -100px);
+    @include transform(translate(0, -100px));
   }
 
   100% {
-    -webkit-transform: translate(0, 0);
-    -moz-transform: translate(0, 0);
-    -ms-transform: translate(0, 0);
-    -o-transform: translate(0, 0);
-    transform: translate(0, 0);
+    @include transform(translate(0, 0));
   }
 }
 

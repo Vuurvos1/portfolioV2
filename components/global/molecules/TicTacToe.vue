@@ -58,7 +58,12 @@ export default {
 
 <style lang="scss" scoped>
 .ticTacToe {
-  margin: 1rem 0;
+  width: 100vw;
+
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: -1.5rem;
+
   padding: 2.4rem 1.5rem;
   background-color: var(--col-secondary);
 
@@ -140,9 +145,8 @@ export default {
   }
 
   @media screen and (min-width: 48rem) {
-    // width: calc((100vw - (100vw - 100%)) / 12 * 6);
-    // max-width: 40rem;
-    margin: 2rem auto;
+    width: auto;
+    margin-left: 0;
   }
 }
 </style>

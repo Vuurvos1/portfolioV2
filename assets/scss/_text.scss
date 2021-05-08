@@ -65,6 +65,12 @@ p,
   // margin-bottom: 1em;
 }
 
+ol,
+ul,
+li {
+  color: var(--text);
+}
+
 button,
 .button {
   font-size: 0.875rem;

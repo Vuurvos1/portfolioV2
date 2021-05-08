@@ -54,6 +54,19 @@
     }
 
     // list styles
+    ul,
+    ol {
+      margin-bottom: 2ch;
+      margin-left: 2rem;
+    }
+
+    .nuxt-content {
+      & > ul {
+        li {
+          list-style: disc;
+        }
+      }
+    }
 
     // anchor styles
 
@@ -67,52 +80,12 @@
   }
 }
 
-// h2,
-// .heading2 {
-//   font-size: 3.75rem;
-//   font-weight: 600;
-// }
-
-// h3,
-// .heading3 {
-//   font-size: 3rem;
-//   font-weight: 400;
-// }
-
-// h4,
-// .heading4 {
-//   font-size: 2.125rem;
-//   font-weight: 700;
-// }
-
-// h5,
-// .heading5 {
-//   font-size: 1.5rem;
-//   font-weight: 700;
-// }
-
-// h6,
-// .heading6 {
-//   font-size: 1.25rem;
-//   font-weight: 500;
-// }
-
 //     p a {
 //       display: initial;
 //     }
 
 //     a.button {
 //       display: inline-block;
-//     }
-
-//     ul {
-//       max-width: 30rem;
-//       margin: 0 auto 0.8em auto;
-//       padding: 0 0.4rem;
-//     }
-
-//     li {
-//       list-style: inside;
 //     }
 
 //     .projects--grid {
@@ -128,17 +101,6 @@
 
 // /* Tablet */
 // @media screen and (min-width: 48rem) {
-//   .projectDesc article {
-//     p,
-//     h1,
-//     h2,
-//     h3,
-//     h4,
-//     h5 {
-//       padding-left: 0;
-//       padding-right: 0;
-//     }
-
 //     ul.projects--grid {
 //       img {
 //         width: 100%;
