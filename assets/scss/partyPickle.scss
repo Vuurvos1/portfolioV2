@@ -64,12 +64,8 @@
   }
 
   .knoppen {
-    display: block;
-    position: absolute;
     display: flex;
     width: 100%;
-    height: auto;
-    bottom: 3em;
     flex-direction: row;
     justify-content: center;
     cursor: pointer;

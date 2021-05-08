@@ -122,7 +122,7 @@ export default {
         <li
           v-for="article of articles"
           :key="article.slug"
-          class="projects__item"
+          class="projects__item aspect-1"
         >
           <PostItem :article="article" />
         </li>
@@ -216,6 +216,10 @@ export default {
   @media screen and (min-width: 48rem) {
     grid-template-columns: repeat(3, 1fr);
   }
+}
+
+.projects__item {
+  overflow: hidden;
 }
 
 @keyframes dropIn {

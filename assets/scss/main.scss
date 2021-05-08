@@ -60,6 +60,26 @@ main {
   background-color: rgba(59, 130, 246, 0.25);
 }
 
+.aspect-1 {
+  aspect-ratio: 1;
+
+  // fallback for browsers that don't support aspect-ratio
+  position: relative;
+  @supports not (aspect-ratio: 1) {
+    &::before {
+      content: "";
+      padding-bottom: 100%;
+      display: block;
+    }
+
+    & > :first-child {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}
+
 .grecaptcha-badge {
   display: none;
   // transform: translateX(100vw);

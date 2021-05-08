@@ -43,19 +43,18 @@ export default {
 <style lang="scss" scoped>
 @import "~assets/scss/mixins";
 
-h2 {
-  text-shadow: rgba(30, 30, 30, 0.5) 0px 0px 0.5rem;
+h2,
+img {
+  transition: transform 0.2s ease-out;
 }
 
-svg {
-  height: 1.6em;
+h2 {
+  text-shadow: rgba(30, 30, 30, 0.5) 0px 0px 0.5rem;
 }
 
 img {
   width: 100%;
   height: auto;
-
-  transition: all 0.2s ease-out;
 }
 
 h2 {
@@ -63,8 +62,6 @@ h2 {
   position: absolute;
   bottom: 0;
   margin-bottom: 0;
-  transition: all 0.2s ease-out;
-
   transform: translateY(0);
 }
 
@@ -72,10 +69,12 @@ svg {
   position: absolute;
   bottom: 0;
 
-  transition: all 0.2s ease-out;
+  height: 1.6em;
 
   opacity: 0;
   transform: translateY(1.6rem);
+
+  transition: all 0.2s ease-out;
 
   path {
     fill: var(--white);
@@ -91,7 +90,9 @@ svg {
 }
 
 a {
-  outline: none;
+  // outline: none;
+  overflow: hidden;
+
   @include hocus() {
     h2 {
       transform: translateY(-0.8em);

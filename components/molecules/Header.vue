@@ -1,3 +1,14 @@
+<script>
+export default {
+  setup() {},
+  methods: {
+    closeMenu: function () {
+      document.querySelector("#toggleMenu").checked = false;
+    },
+  },
+};
+</script>
+
 <template>
   <header>
     <nav class="menu">
@@ -18,9 +29,11 @@
       </label>
 
       <ul class="menu__list">
-        <li class="menu__item"><nuxt-link to="/">Home</nuxt-link></li>
-        <li><nuxt-link to="/projects">Projects</nuxt-link></li>
-        <li><nuxt-link to="/contact">Contact</nuxt-link></li>
+        <li @click="closeMenu"><nuxt-link to="/">Home</nuxt-link></li>
+        <li @click="closeMenu">
+          <nuxt-link to="/projects">Projects</nuxt-link>
+        </li>
+        <li @click="closeMenu"><nuxt-link to="/contact">Contact</nuxt-link></li>
       </ul>
     </nav>
   </header>

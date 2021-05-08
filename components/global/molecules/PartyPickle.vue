@@ -239,4 +239,18 @@ export default {
   </section>
 </template>
 
-<style></style>
+<style lang="scss" scoped>
+.partyPickle {
+  width: 100vw;
+  margin-left: -1.5rem;
+
+  padding-top: 44rem;
+  padding-bottom: 6rem;
+  background: linear-gradient(#ffcb57 70%, rgba(0, 0, 0, 0) 0 100%);
+
+  @media screen and (min-width: 48rem) {
+    width: auto;
+    margin-left: 0;
+  }
+}
+</style>
