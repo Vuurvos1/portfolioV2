@@ -21,7 +21,7 @@ export default {
           hid: "description",
           name: "description",
           content:
-            "Hey, I’m Sam. I’m a Front end Developer currently studying Communication and multimedia design in Amsterdam. Apart from Front end development, I am also intrested things like game development, programming, and 3D modeling",
+            "Sam is a Front end Developer creating digital experiences currently studying Communication and multimedia design in Amsterdam.",
         },
         {
           hid: "ogtitle",
@@ -204,6 +204,10 @@ export default {
 
       animation: dropIn 1s ease forwards;
       animation-delay: calc(var(--order) * 100ms);
+
+      @media (prefers-reduced-motion) {
+        animation-delay: 0s;
+      }
     }
   }
 }

@@ -126,8 +126,45 @@ header {
       margin-bottom: 2.625rem;
       text-align: center;
 
+      transition: all 0.2s ease;
+      position: relative;
+
+      overflow-x: hidden;
+
+      padding-left: 0.6ch;
+      padding-right: 0.6ch;
+
+      width: min-content;
+      margin-left: auto;
+      margin-right: auto;
+
       &:first-child {
         margin-top: 6.25rem;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+
+        top: calc(50% - 2px);
+
+        height: 2px;
+        width: 100%;
+
+        // background-color: #ff3c31;
+        background-color: var(--col-primary);
+
+        animation-duration: 0.65s;
+        transform: translateX(-110%);
+
+        pointer-events: none;
+      }
+
+      &:hover {
+        &::before {
+          animation-name: hoverBar;
+          animation-timing-function: ease;
+        }
       }
     }
 
@@ -166,6 +203,16 @@ header {
         }
       }
     }
+  }
+}
+
+@keyframes hoverBar {
+  0% {
+    transform: translateX(-110%);
+  }
+
+  100% {
+    transform: translateX(110%);
   }
 }
 </style>

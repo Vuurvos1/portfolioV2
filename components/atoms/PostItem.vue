@@ -107,5 +107,14 @@ a {
       transform: translateY(0);
     }
   }
+
+  @media (prefers-reduced-motion) {
+    @include hocus() {
+      img {
+        // don't scale image with reduced motion
+        transform: scale(1);
+      }
+    }
+  }
 }
 </style>

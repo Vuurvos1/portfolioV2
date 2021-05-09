@@ -9,33 +9,52 @@ const blob4Trans = getTranslateValues(blob4);
 const blob5 = document.querySelector(".svg5");
 const blob5Trans = getTranslateValues(blob5);
 
-// console.log(getTranslateValues(blob1));
-// console.log(blob3Trans);
+let scrollPos = 0;
 
-let value = 0;
+// Grab the prefers reduced media query.
+const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
 
-window.addEventListener("scroll", () => {
-  value = window.scrollY;
+// Check if the media query matches or is not available.
+if (!mediaQuery || mediaQuery.matches) {
+  // doSomethingWithoutAnimation();
+} else {
+  // doSomethingWithAnimation();
+  window.addEventListener("scroll", paralaxBlobs);
+}
 
-  blob1.style.transform = `translate(${blob1Trans.x}px, ${value * 0.45}px)`;
+// Ads an event listener to check for changes in the media query's value.
+mediaQuery.addEventListener("change", () => {
+  if (mediaQuery.matches) {
+    // doSomethingWithoutAnimation();
+    window.removeEventListener("scroll", paralaxBlobs);
+  } else {
+    // doSomethingWithAnimation();
+    window.addEventListener("scroll", paralaxBlobs);
+  }
+});
 
-  blob2.style.transform = `translate( ${blob2Trans.x}px,${value * 0.4}px)`;
+function paralaxBlobs() {
+  scrollPos = window.scrollY;
+
+  blob1.style.transform = `translate(${blob1Trans.x}px, ${scrollPos * 0.45}px)`;
+
+  blob2.style.transform = `translate( ${blob2Trans.x}px,${scrollPos * 0.4}px)`;
 
   blob3.style.transform = `translate(${blob3Trans.x}px, ${Math.min(
-    (value - 200) * 0.1 - 25,
+    (scrollPos - 200) * 0.1 - 25,
     120
   )}px)`;
 
   blob4.style.transform = `translate(${blob4Trans.x}px, ${Math.min(
-    (value - 700) * 0.15 - 100,
+    (scrollPos - 700) * 0.15 - 100,
     125
   )}px)`;
 
   blob5.style.transform = `translate(${blob5Trans.x}px, ${Math.max(
-    Math.min((value - 2400) * 0.3, 120),
+    Math.min((scrollPos - 2400) * 0.3, 120),
     -25
   )}px)`;
-});
+}
 
 /**
  * Gets computed translate values
