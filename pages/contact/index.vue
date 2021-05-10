@@ -76,7 +76,7 @@ export default {
 <template>
   <main class="contactPage">
     <section class="grid contactPage__form">
-      <h1 class="width-4/9">Let’s get in contact</h1>
+      <h1 class="width-4/9 heading2">Let’s get in contact</h1>
 
       <form
         id="contactForm"
@@ -124,11 +124,11 @@ export default {
     </section>
 
     <section class="grid contactPage__social">
-      <h2 class="width-4/9">Find me on other platforms</h2>
+      <h2 class="width-4/9 heading2">Find me on other platforms</h2>
 
-      <ul class="width-2/4-small width-4/9">
+      <ul class="width-4/9">
         <li>
-          <a href="https://github.com/vuurvos1/">
+          <a href="https://github.com/vuurvos1/" aria-label="Github">
             Github
             <svg viewBox="0 0 79 79" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -138,7 +138,7 @@ export default {
           </a>
         </li>
         <li>
-          <a href="https://codepen.io/firefox3000">
+          <a href="https://codepen.io/firefox3000" aria-label="Codepen">
             Codepen
             <svg viewBox="0 0 78 78" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -148,7 +148,10 @@ export default {
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/sam-de-kanter-b3020b1a0/">
+          <a
+            href="https://www.linkedin.com/in/sam-de-kanter-b3020b1a0/"
+            aria-label="LinkedIn"
+          >
             Linkedin
             <svg viewBox="0 0 79 79" xmlns="http://www.w3.org/2000/svg">
               <path

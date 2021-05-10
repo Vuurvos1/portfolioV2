@@ -2,6 +2,8 @@
   --black: #000000;
   --white: #ffffff;
 
+  --rgbText: 0, 0, 0;
+
   --medium-black: #292929;
   --light-black: #121212;
 
@@ -37,10 +39,13 @@
     --background: #0d1117;
     --text-col: var(--white);
     --text: var(--white);
+
+    --rgbText: 255, 255, 255;
   }
 }
 
 .dark {
   --background: #0d1117;
   --text-col: var(--white);
+  --text: var(--white);
 }

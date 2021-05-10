@@ -65,10 +65,10 @@ header {
     cursor: pointer;
 
     font-size: 1.125rem;
-    color: var(--text-col);
+    color: var(--white);
 
     svg {
-      fill: var(--white);
+      fill: var(--text);
       margin-left: 1rem;
       transition: all 0.3s ease;
 
@@ -138,6 +138,10 @@ header {
       margin-left: auto;
       margin-right: auto;
 
+      a {
+        color: inherit;
+      }
+
       &:first-child {
         margin-top: 6.25rem;
       }
@@ -167,18 +171,6 @@ header {
         }
       }
     }
-
-    // li:nth-child(1)::before {
-    //   content: "\01F3E0";
-    // }
-
-    // li:nth-child(2)::before {
-    //   content: "\01F4A1";
-    // }
-
-    // li:nth-child(3)::before {
-    //   content: "\02709";
-    // }
   }
 
   @media screen and (min-width: 48rem) {
