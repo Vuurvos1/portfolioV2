@@ -48,7 +48,7 @@ export default {
 <template>
   <main class="projectDesc grid">
     <!-- back button -->
-    <a class="width-4/9" href="/projects">
+    <a class="width-4/9 back lineHover" href="/projects">
       <svg
         xmlns="http://www.w3.org/2000/svg"
         enable-background="new 0 0 24 24"
@@ -68,16 +68,18 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-a {
+.back {
   display: flex;
   flex-direction: row;
   align-items: center;
 
   margin-top: 3rem;
+  margin-right: auto;
 
   svg {
     fill: var(--text);
     transform: rotate(270deg);
+    z-index: -1;
 
     margin-right: 1rem;
   }

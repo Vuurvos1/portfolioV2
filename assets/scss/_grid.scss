@@ -44,6 +44,10 @@
   grid-column: span 2;
 }
 
+.width-2\/10 {
+  grid-column: span 2;
+}
+
 .width-3\/10 {
   grid-column: span 2;
 }
@@ -58,8 +62,8 @@
     grid-template-columns: repeat(8, 1fr);
   }
 
-  .width-4\/9 {
-    grid-column: 3 / 7;
+  .width-2\/10 {
+    grid-column: 1 / 8;
   }
 
   .width-3\/10 {
@@ -91,6 +95,10 @@
 
   .width-4\/9 {
     grid-column: 4 / 10;
+  }
+
+  .width-2\/10 {
+    grid-column: 2 / 10;
   }
 
   .width-3\/10 {

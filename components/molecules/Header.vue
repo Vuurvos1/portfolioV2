@@ -46,7 +46,6 @@ header {
   top: 0;
   left: 0;
   background: #161b22;
-  --text-col: var(--white);
 }
 
 .menu {
@@ -68,7 +67,7 @@ header {
     color: var(--white);
 
     svg {
-      fill: var(--text);
+      fill: var(--white);
       margin-left: 1rem;
       transition: all 0.3s ease;
 
@@ -139,7 +138,7 @@ header {
       margin-right: auto;
 
       a {
-        color: inherit;
+        color: var(--white);
       }
 
       &:first-child {

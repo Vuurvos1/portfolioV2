@@ -64,7 +64,7 @@
 
   &__about2 {
     position: relative;
-    // max-width: 100rem;
+
     margin: 0 auto 10rem auto;
     padding-top: 4rem;
 
@@ -95,15 +95,8 @@
     margin-bottom: 14rem;
 
     .moreProjects {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: baseline;
-
-      margin-left: auto;
-
       svg {
-        height: 0.8em;
+        height: 0.75em;
         width: auto;
         margin-left: 1rem;
         fill: currentColor;
@@ -119,14 +112,11 @@
       width: fit-content;
     }
 
-    svg,
     .svg5 {
       z-index: -1;
       position: absolute;
-      transition: all 0.1 ease-out;
-    }
+      transition: all 0.1s ease-out;
 
-    .svg5 {
       top: -12rem;
       left: 2rem;
 
@@ -134,6 +124,10 @@
       height: auto;
 
       fill: var(--col-secondary);
+
+      @media screen and (min-width: 64rem) {
+        left: 20vw;
+      }
     }
   }
 }
@@ -160,7 +154,6 @@
       position: relative;
 
       padding-top: 4rem;
-      margin-bottom: 14rem;
 
       .svg3 {
         top: 77px;
@@ -175,26 +168,6 @@
         transform: translateX(80px);
       }
     }
-
-    // &__projects {
-    //   // ul {
-    //   //   svg {
-
-    //   //   }
-    //   // }
-
-    //   a {
-    //     // display: flex;
-    //     // flex-direction: row;
-    //     // align-items: center;
-    //     // margin-left: auto;
-
-    //     // svg {
-    //     //   height: 0.8em;
-    //     //   fill: currentColor;
-    //     // }
-    //   }
-    // }
   }
 }
 

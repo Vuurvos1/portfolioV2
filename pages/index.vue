@@ -44,7 +44,7 @@ export default {
 <template>
   <main class="homePage">
     <section class="grid homePage__about">
-      <h1 class="heading2 width-3/10">
+      <h1 class="heading2 width-2/10">
         <span class="mask"><span>Hey, I’m Sam.</span></span>
         <span class="mask" style="--order: 1"><span>I’m</span></span>
         <span class="mask" style="--order: 2"><span>a</span></span>
@@ -84,8 +84,8 @@ export default {
     </section>
 
     <section id="whatIdo" class="grid homePage__about2">
-      <h2 class="heading3 width-3/10">What do I do</h2>
-      <p class="width-3/10">
+      <h2 class="heading3 width-4/9">What do I do</h2>
+      <p class="width-4/9">
         Apart from Front end development, I am also intrested things like game
         development, programming, and 3D modeling
       </p>
@@ -128,7 +128,7 @@ export default {
         </li>
       </ul>
 
-      <a class="width-3/10 heading6 moreProjects" href="/projects"
+      <a class="width-3/10 heading6 moreProjects lineHover" href="/projects"
         >Explore projects
         <svg
           width="49"
@@ -186,7 +186,21 @@ export default {
       flex-direction: row;
       align-items: center;
 
-      margin-top: 1ch;
+      margin-left: auto;
+    }
+  }
+
+  &__about {
+    h1 {
+      width: clamp(12ch, 100%, 32ch);
+    }
+  }
+
+  &__about2 {
+    margin-bottom: 4.375rem;
+
+    @media screen and (min-width: 48rem) {
+      margin-bottom: 5.2rem;
     }
   }
 }
@@ -216,6 +230,9 @@ export default {
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: auto;
+  row-gap: 1.5rem;
+
+  margin-bottom: 1.6rem;
 
   @media screen and (min-width: 48rem) {
     grid-template-columns: repeat(3, 1fr);

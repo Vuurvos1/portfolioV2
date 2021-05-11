@@ -80,6 +80,46 @@ main {
   }
 }
 
+.lineHover {
+  position: relative;
+  overflow-x: hidden;
+
+  &::before {
+    content: "";
+    position: absolute;
+
+    top: calc(50% - 2px);
+
+    height: 2px;
+    width: 100%;
+
+    // background-color: #ff3c31;
+    background-color: var(--col-primary);
+
+    animation-duration: 0.65s;
+    transform: translateX(-110%);
+
+    pointer-events: none;
+  }
+
+  &:hover {
+    &::before {
+      animation-name: hoverBar;
+      animation-timing-function: ease;
+    }
+  }
+}
+
+@keyframes hoverBar {
+  0% {
+    transform: translateX(-110%);
+  }
+
+  100% {
+    transform: translateX(110%);
+  }
+}
+
 .grecaptcha-badge {
   display: none;
   // transform: translateX(100vw);
