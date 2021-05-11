@@ -128,9 +128,9 @@ body .button {
   text-transform: uppercase;
   font-weight: bold;
   color: var(--col-primary);
-  border: 1px solid rgba(0, 0, 0, 0.12);
+  border: 1px solid rgba(var(--rgbText), 0.5);
   padding: 0.6rem 0.8rem;
-  @include rounded(0.25rem);
+  border-radius: 0.25rem;
   position: relative;
   overflow: hidden;
   transition: all 0.1s ease-out;

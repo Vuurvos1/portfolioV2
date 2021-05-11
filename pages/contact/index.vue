@@ -4,28 +4,14 @@ import TextInput from "../../components/atoms/TextInput.vue";
 export default {
   components: { TextInput },
   layout: "contactLayout",
-  mounted() {
-    // TO DO ADD CAPATCHA SPAM PROTECTION
-    // spam protection
-    // const recaptchaScript = document.createElement("script");
-    // recaptchaScript.setAttribute(
-    //   "src",
-    //   "https://www.google.com/recaptcha/api.js?render=6LfoMq4aAAAAAPrkUlaKl6lGM1mUV_WXSUxsv8Za"
-    // );
-    // document.head.appendChild(recaptchaScript);
-
-    // grecaptcha.ready(function () {
-    //   grecaptcha
-    //     .execute("YOUR_SITE_KEY", { action: "homepage" })
-    //     .then(function (token) {
-    //       document.getElementById("captchaResponse").value = token;
-    //     });
-    // });
-
-    // form submit logic
-    const formEl = document.querySelector("#contactForm");
-    formEl.addEventListener("submit", (e) => {
+  methods: {
+    sendForm: function (e) {
+      // spam protection done by getform maybe still add recapatcha3?
       e.preventDefault();
+
+      const formEl = document.querySelector("#contactForm");
+
+      // validate inputs
       const name = document.querySelector("#name");
       const mail = document.querySelector("#email");
       const msg = document.querySelector("#message");
@@ -38,8 +24,6 @@ export default {
 
       const data = new URLSearchParams(formData);
 
-      // console.log(data);
-
       fetch("https://getform.io/f/7269afe1-d68e-4ecd-9138-b939abb663dc", {
         method: "POST",
         body: data,
@@ -49,8 +33,12 @@ export default {
       mail.value = "";
       msg.value = "";
 
-      console.log("submitted form");
-    });
+      document.querySelector("#submitbutton").classList.add("clicked");
+
+      setTimeout(() => {
+        document.querySelector("#submitbutton").classList.remove("clicked");
+      }, 4000);
+    },
   },
   head() {
     return {
@@ -83,6 +71,7 @@ export default {
         action="https://getform.io/f/7269afe1-d68e-4ecd-9138-b939abb663dc"
         method="POST"
         class="width-4/9"
+        @submit="sendForm($event)"
       >
         <TextInput
           :type="'text'"
@@ -103,24 +92,12 @@ export default {
           :req="true"
         ></TextInput>
 
-        <!-- <input id="captchaResponse" type="hidden" name="g-recaptcha-response" /> -->
-
         <button id="submitbutton" type="submit" class="button">
-          Send Message
+          <span> Send Message </span>
+          <span>Sending...</span>
+          <span>Done!</span>
         </button>
       </form>
-
-      <!-- <script>
-        grecaptcha.ready(function () {
-          grecaptcha
-            .execute("6LfoMq4aAAAAAPrkUlaKl6lGM1mUV_WXSUxsv8Za", {
-              action: "homepage",
-            })
-            .then(function (token) {
-              document.getElementById("captchaResponse").value = token;
-            });
-        });
-      </script> -->
     </section>
 
     <section class="grid contactPage__social">
@@ -165,4 +142,59 @@ export default {
   </main>
 </template>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+#submitbutton {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+
+  height: 2.6em;
+  overflow-y: hidden;
+
+  span {
+    margin: 0.6em 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.clicked {
+    span {
+      animation-name: sendButton;
+      animation-duration: 3.4s;
+    }
+  }
+}
+
+@keyframes sendButton {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-2.4em);
+  }
+
+  40% {
+    transform: translateY(-2.4em);
+  }
+
+  70% {
+    transform: translateY(-4.8em);
+  }
+
+  90% {
+    transform: translateY(-4.8em);
+  }
+
+  100% {
+    // transform: translateY(-4.8em);
+  }
+}
+</style>
