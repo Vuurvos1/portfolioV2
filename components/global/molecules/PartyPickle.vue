@@ -252,5 +252,9 @@ export default {
     width: auto;
     margin-left: 0;
   }
+
+  @media screen and (min-width: 64rem) {
+    background: linear-gradient(#ffcb57 65%, rgba(0, 0, 0, 0) 0 100%);
+  }
 }
 </style>

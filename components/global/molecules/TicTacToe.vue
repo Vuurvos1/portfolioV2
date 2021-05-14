@@ -60,8 +60,8 @@ export default {
 .ticTacToe {
   width: 100vw;
 
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  margin-top: 3rem;
+  margin-bottom: 2.4rem;
   margin-left: -1.5rem;
 
   padding: 2.4rem 1.5rem;

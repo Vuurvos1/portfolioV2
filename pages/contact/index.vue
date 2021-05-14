@@ -42,8 +42,13 @@ export default {
   },
   head() {
     return {
-      title: "Contact Page",
+      title: "Contact",
       meta: [
+        {
+          hid: "ogtitle",
+          property: "og:title",
+          content: "Contact",
+        },
         {
           hid: "description",
           name: "description",
@@ -51,9 +56,25 @@ export default {
             "Find some info about me to find me on different platforms, or contact me if you have any questions",
         },
         {
-          hid: "ogtitle",
-          property: "og:title",
-          content: "Contact page",
+          hid: "ogdescription ",
+          property: "og:description ",
+          content: "Lets get in contact",
+        },
+
+        {
+          hid: "ogurl",
+          property: "og:url",
+          content: "http://schelpkikker.nl/contact",
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: "http://schelpkikker.nl/logo.png",
+        },
+        {
+          hid: "keywords",
+          property: "keywords",
+          content: "Contact, mail",
         },
       ],
     };

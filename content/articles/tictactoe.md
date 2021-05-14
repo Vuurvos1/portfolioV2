@@ -4,27 +4,23 @@ description: A tic tac toe ai with varying difficultie
 img: /img/tictactoe.png
 alt: Tic tac toe
 link: tictactoe
+createdAt: 2021-01-10T00:00:00+0000
 ---
 
 # Tic Tac Toe
 
-Voor dit project heb ik Boter Kaas en Eieren gemaakt met JavaScript om
-mijzelf uit te dagen. Maar ik had niemand om tegen te spelen daarom heb
-ik ook een robot gemaakt om tegen te spelen.
+This project started as a JavaScript exercise and a way to challenge myself to get better at coding / JS. But once I finished the base logic of Tic Tac Toe I had no one to play against so I decided to add a robot to play against.
 
-Boter kaas en eieren heeft in het ergste geval 196839 (3^9) mogelijke
-manieren waarop het spel uitgespeeld kan worden. Dit lijkt misschien
-best veel, maar al deze mogelijke posities kunnen nog steeds binnen één
-seconde berekend worden.
+Tic Tac Toe has 196839 (3^9) possible positions which might sound like a lot of ways to play the game. But for a computer, this number is quite low. It is quite easy to brute force your way through all the possible positions and calculate the best move from there.
 
 <tic-tac-toe></tic-tac-toe>
 
-Door gebruik te maken van het minimax algoritme kijkt de computer naar
-alle mogelijke manieren waarop het spel verder gespeeld zou kunnen
-worden. Het algoritme kijkt dan naar alle scenario's waar de computer
-wint en geeft deze een score van +1, als hij verliest een score van -1
-en bij een gelijkspel een score van 0. Vervolgens kiest hij het scenario
-met de hoogste score.
+## But how?
+
+Using the Minimax algorithm you can search through the entire game tree to look for the best possible move given a certain board position.
+Once a winning position is reached or all board squares are filled I evaluate the board and assign it a score. If the position is winning for the computer it gets a score of +1, if the position is winning for the human it gets a score of -1 and if the game is a draw it gets a score of 0. After having looked through all the possible positions it picks the move with the highest chance of winning.
+
+Later I updated this project to include alpha-beta pruning. Once fully implemented this sped up the search for the best move by about 10 times, which is truly crazy. Alpha-beta pruning works by not having to examine game positions that are determined to be worse than a previously looked at move.
 
 <icon-link href="https://github.com/Vuurvos1/tictactoe" target="_blank" icon="github">
 Source code

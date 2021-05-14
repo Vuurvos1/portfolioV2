@@ -1,10 +1,22 @@
 .projectDesc {
+  // margin-left: auto;
+  // margin-right: auto;
+
+  // max-width: 46rem;
+
   margin-bottom: 4rem;
   grid-template-rows: min-content;
 
   article {
     p {
-      margin-bottom: 1.4ch;
+      margin-bottom: 1.6ch;
+
+      // max-width: clamp(45ch, 100%, 75ch);
+      // max-width: 46rem;
+      margin-left: auto;
+      margin-right: auto;
+
+      line-height: 1.4;
 
       &:last-of-type {
         margin-bottom: 2ch;
@@ -16,8 +28,11 @@
     h3,
     h4,
     h5 {
-      margin-top: 0.2rem;
-      margin-bottom: 1.5rem;
+      // margin-top: 0.2rem;
+      margin-bottom: 1ch;
+
+      // max-width: clamp(45ch, 100%, 75ch);
+      max-width: 46rem;
     }
 
     h1 {
@@ -26,22 +41,22 @@
     }
 
     h2 {
-      font-size: 3rem;
-      font-weight: 400;
+      font-size: 2.125rem;
+      font-weight: 600;
     }
 
     h3 {
-      font-size: 2.125rem;
-      font-weight: 700;
-    }
-
-    h4 {
       font-size: 1.5rem;
       font-weight: 700;
     }
 
-    h5 {
+    h4 {
       font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    h5 {
+      font-size: 1rem;
       font-weight: 700;
     }
 

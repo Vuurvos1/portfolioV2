@@ -16,18 +16,38 @@ export default {
 
   head() {
     return {
-      title: "Projecten",
+      title: "Projects",
       meta: [
-        {
-          hid: "description",
-          name: "description",
-          content:
-            "Hey, I’m Sam. I’m a Front end Developer currently studying Communication and multimedia design in Amsterdam. Apart from Front end development, I am also intrested things like game development, programming, and 3D modeling",
-        },
         {
           hid: "ogtitle",
           property: "og:title",
-          content: "Project page",
+          content: "Projects",
+        },
+        {
+          hid: "description",
+          name: "description",
+          content: "See all my recent projects",
+        },
+        {
+          hid: "ogdescription ",
+          property: "og:description ",
+          content: "See all my recent projects",
+        },
+
+        {
+          hid: "ogurl",
+          property: "og:url",
+          content: "http://schelpkikker.nl/projects",
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: "http://schelpkikker.nl/logo.png",
+        },
+        {
+          hid: "keywords",
+          property: "keywords",
+          content: "Projects",
         },
       ],
     };

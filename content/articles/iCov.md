@@ -4,6 +4,7 @@ description: A team project to create a data visualization tool for iCov to find
 img: /img/iCovThumbnail.png
 alt: icov
 link: iCov
+createdAt: 2021-02-22T00:00:00+0000
 ---
 
 # iCov

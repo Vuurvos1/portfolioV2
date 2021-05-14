@@ -15,7 +15,7 @@ export default {
   },
   head() {
     return {
-      title: "Portfolio | Sam",
+      title: "Portfolio | Sam de Kanter",
       meta: [
         {
           hid: "description",
@@ -24,9 +24,30 @@ export default {
             "Sam is a Front end Developer creating digital experiences currently studying Communication and multimedia design in Amsterdam.",
         },
         {
+          hid: "ogdescription ",
+          property: "og:description ",
+          content:
+            "Sam is a Front end Developer creating digital experiences currently studying Communication and multimedia design in Amsterdam.",
+        },
+        {
           hid: "ogtitle",
           property: "og:title",
-          content: "Home page",
+          content: "Portfolio | Sam de Kanter",
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: `http://schelpkikker.nl/logo.png`,
+        },
+        {
+          hid: "keywords",
+          property: "keywords",
+          content: "Portfolio, Sam, Frontend, JavaScript, Developer",
+        },
+        {
+          hid: "ogurl",
+          property: "og:url",
+          content: "http://schelpkikker.nl/",
         },
       ],
       script: [
