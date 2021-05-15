@@ -8,6 +8,12 @@
   grid-template-rows: min-content;
 
   article {
+    .nuxt-content {
+      p:nth-child(2) img {
+        margin-top: 0;
+      }
+    }
+
     p {
       margin-bottom: 1.6ch;
 
@@ -28,11 +34,17 @@
     h3,
     h4,
     h5 {
-      // margin-top: 0.2rem;
       margin-bottom: 1ch;
 
       // max-width: clamp(45ch, 100%, 75ch);
       max-width: 46rem;
+    }
+
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin-top: 1.8ch;
     }
 
     h1 {
@@ -64,8 +76,8 @@
       width: 100%;
       height: auto;
 
-      margin-top: 1.2rem;
       margin-bottom: 1.2rem;
+      margin-top: 1.2rem;
     }
 
     // list styles
