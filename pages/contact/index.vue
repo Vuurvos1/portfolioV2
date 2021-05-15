@@ -1,58 +1,132 @@
+<script>
+import TextInput from "../../components/atoms/TextInput.vue";
+
+export default {
+  components: { TextInput },
+  layout: "contactLayout",
+  methods: {
+    sendForm: function (e) {
+      // spam protection done by getform maybe still add recapatcha3?
+      e.preventDefault();
+
+      const formEl = document.querySelector("#contactForm");
+
+      // validate inputs
+      const name = document.querySelector("#name");
+      const mail = document.querySelector("#email");
+      const msg = document.querySelector("#message");
+
+      const formData = new FormData(formEl);
+
+      formData.append("name", name.value);
+      formData.append("email", mail.value);
+      formData.append("message", msg.value);
+
+      const data = new URLSearchParams(formData);
+
+      fetch("https://getform.io/f/7269afe1-d68e-4ecd-9138-b939abb663dc", {
+        method: "POST",
+        body: data,
+      });
+
+      name.value = "";
+      mail.value = "";
+      msg.value = "";
+
+      document.querySelector("#submitbutton").classList.add("clicked");
+
+      setTimeout(() => {
+        document.querySelector("#submitbutton").classList.remove("clicked");
+      }, 4000);
+    },
+  },
+  head() {
+    return {
+      title: "Contact",
+      meta: [
+        {
+          hid: "ogtitle",
+          property: "og:title",
+          content: "Contact",
+        },
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Find some info about me to find me on different platforms, or contact me if you have any questions",
+        },
+        {
+          hid: "ogdescription ",
+          property: "og:description ",
+          content: "Lets get in contact",
+        },
+
+        {
+          hid: "ogurl",
+          property: "og:url",
+          content: "http://schelpkikker.nl/contact",
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: "http://schelpkikker.nl/logo.png",
+        },
+        {
+          hid: "keywords",
+          property: "keywords",
+          content: "Contact, mail",
+        },
+      ],
+    };
+  },
+};
+</script>
+
 <template>
   <main class="contactPage">
     <section class="grid contactPage__form">
-      <h1 class="width-4/9">Let’s get in contact</h1>
+      <h1 class="width-4/9 heading2">Let’s get in contact</h1>
 
       <form
-        action="mailto:samdepanter@gmail.com?subject=Portfolio"
-        method="post"
+        id="contactForm"
+        action="https://getform.io/f/7269afe1-d68e-4ecd-9138-b939abb663dc"
+        method="POST"
         class="width-4/9"
+        @submit="sendForm($event)"
       >
-        <div class="textInput--container">
-          <input
-            id="firstname"
-            type="text"
-            name="firstname"
-            placeholder="Your Name"
-            required
-          />
-          <label for="firstname">Your Name</label>
-        </div>
-
-        <div class="textInput--container">
-          <input
-            id="emailadres"
-            type="email"
-            name="emailadres"
-            placeholder="Your Email Adress"
-            required
-          />
-          <label for="emailadres">Your Email Adress</label>
-        </div>
-
-        <div class="textInput--container textInput--large">
-          <textarea
-            id="message"
-            name="message"
-            rows="5"
-            placeholder="Leave a Message"
-            required
-          ></textarea>
-          <label for="message">Leave a Message</label>
-        </div>
+        <TextInput
+          :type="'text'"
+          label="Your name"
+          name="name"
+          :req="true"
+        ></TextInput>
+        <TextInput
+          :type="'email'"
+          label="Your email address"
+          name="email"
+          :req="true"
+        ></TextInput>
+        <TextInput
+          :type="'textarea'"
+          label="Leave a message"
+          name="message"
+          :req="true"
+        ></TextInput>
 
         <button id="submitbutton" type="submit" class="button">
-          Send Message
+          <span> Send Message </span>
+          <span>Sending...</span>
+          <span>Done!</span>
         </button>
       </form>
     </section>
 
     <section class="grid contactPage__social">
-      <h2 class="width-4/9">Find me on other platforms</h2>
+      <h2 class="width-4/9 heading2">Find me on other platforms</h2>
 
-      <ul class="width-2/4-small width-4/9">
+      <ul class="width-4/9">
         <li>
-          <a href="https://github.com/vuurvos1/">
+          <a href="https://github.com/vuurvos1/" aria-label="Github">
             Github
             <svg viewBox="0 0 79 79" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -62,7 +136,7 @@
           </a>
         </li>
         <li>
-          <a href="https://codepen.io/firefox3000">
+          <a href="https://codepen.io/firefox3000" aria-label="Codepen">
             Codepen
             <svg viewBox="0 0 78 78" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -72,7 +146,10 @@
           </a>
         </li>
         <li>
-          <a href="https://www.linkedin.com/in/sam-de-kanter-b3020b1a0/">
+          <a
+            href="https://www.linkedin.com/in/sam-de-kanter-b3020b1a0/"
+            aria-label="LinkedIn"
+          >
             Linkedin
             <svg viewBox="0 0 79 79" xmlns="http://www.w3.org/2000/svg">
               <path
@@ -86,26 +163,59 @@
   </main>
 </template>
 
-<script>
-export default {
-  layout: "contactLayout",
-  head() {
-    return {
-      title: "Contact Page",
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content:
-            "Find some info about me to find me on different platforms, or contact me if you have any questions",
-        },
-        {
-          hid: "ogtitle",
-          property: "og:title",
-          content: "Contact page",
-        },
-      ],
-    };
-  },
-};
-</script>
+<style lang="scss" scoped>
+#submitbutton {
+  display: flex;
+  flex-direction: column;
+
+  text-align: center;
+
+  height: 2.6em;
+  overflow-y: hidden;
+
+  span {
+    margin: 0.6em 0;
+
+    &:first-child {
+      margin-top: 0;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &.clicked {
+    span {
+      animation-name: sendButton;
+      animation-duration: 3.4s;
+    }
+  }
+}
+
+@keyframes sendButton {
+  0% {
+    transform: translateY(0);
+  }
+
+  20% {
+    transform: translateY(-2.4em);
+  }
+
+  40% {
+    transform: translateY(-2.4em);
+  }
+
+  70% {
+    transform: translateY(-4.8em);
+  }
+
+  90% {
+    transform: translateY(-4.8em);
+  }
+
+  100% {
+    // transform: translateY(-4.8em);
+  }
+}
+</style>

@@ -1,9 +1,80 @@
+<script>
+import PostItem from "../components/atoms/PostItem.vue";
+export default {
+  components: { PostItem },
+  async asyncData({ $content, params }) {
+    const articles = await $content("articles", params.slug)
+      .limit(3)
+      .only(["title", "description", "img", "slug"])
+      .sortBy("createdAt", "asc")
+      .fetch();
+
+    return {
+      articles,
+    };
+  },
+  head() {
+    return {
+      title: "Portfolio | Sam de Kanter",
+      meta: [
+        {
+          hid: "description",
+          name: "description",
+          content:
+            "Sam is a Front end Developer creating digital experiences currently studying Communication and multimedia design in Amsterdam.",
+        },
+        {
+          hid: "ogdescription ",
+          property: "og:description ",
+          content:
+            "Sam is a Front end Developer creating digital experiences currently studying Communication and multimedia design in Amsterdam.",
+        },
+        {
+          hid: "ogtitle",
+          property: "og:title",
+          content: "Portfolio | Sam de Kanter",
+        },
+        {
+          hid: "og:image",
+          property: "og:image",
+          content: `http://schelpkikker.nl/logo.png`,
+        },
+        {
+          hid: "keywords",
+          property: "keywords",
+          content: "Portfolio, Sam, Frontend, JavaScript, Developer",
+        },
+        {
+          hid: "ogurl",
+          property: "og:url",
+          content: "http://schelpkikker.nl/",
+        },
+      ],
+      script: [
+        {
+          src: "/js/parallaxBlobs.js",
+          body: true,
+          defer: true,
+        },
+      ],
+    };
+  },
+};
+</script>
+
 <template>
   <main class="homePage">
     <section class="grid homePage__about">
-      <h1 class="width-3/10">
-        Hey, I’m Sam. I’m a Front end Developer currently studying Communication
-        and multimedia design in Amsterdam
+      <h1 class="heading2 width-2/10">
+        <span class="mask"><span>Hey, I’m Sam.</span></span>
+        <span class="mask" style="--order: 1"><span>I’m</span></span>
+        <span class="mask" style="--order: 2"><span>a</span></span>
+        <span class="mask" style="--order: 3"><span>front</span></span>
+        <span class="mask" style="--order: 4"><span>end</span></span>
+        <span class="mask" style="--order: 5"><span>developer</span></span>
+        <span class="mask" style="--order: 6"><span>creating</span></span>
+        <span class="mask" style="--order: 7"><span>digital</span></span>
+        <span class="mask" style="--order: 8"><span>experiences</span></span>
       </h1>
 
       <a class="scroll width-3/10" href="#whatIdo">scroll</a>
@@ -34,8 +105,8 @@
     </section>
 
     <section id="whatIdo" class="grid homePage__about2">
-      <h2 class="width-3/10 heading1">What do I do</h2>
-      <p class="width-3/10 heading3">
+      <h2 class="heading3 width-4/9">What do I do</h2>
+      <p class="width-4/9">
         Apart from Front end development, I am also intrested things like game
         development, programming, and 3D modeling
       </p>
@@ -66,39 +137,20 @@
     </section>
 
     <section class="grid homePage__projects">
-      <h2 class="width-3/10">Featured projects</h2>
+      <h2 class="heading5 titleSide">Recent projects</h2>
 
-      <ul class="grid width-1/12 grid--inner">
+      <ul class="width-3/10 highlighted">
         <li
           v-for="article of articles"
           :key="article.slug"
-          class="span-4 projects__item"
+          class="projects__item aspect-1"
         >
-          <NuxtLink
-            :to="{ name: 'projects-slug', params: { slug: article.slug } }"
-          >
-            <img :src="article.img" />
-            <div class="projects__text">
-              <h2>{{ article.title }}</h2>
-              <svg
-                width="49"
-                height="32"
-                viewBox="0 0 49 32"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fill-rule="evenodd"
-                  clip-rule="evenodd"
-                  d="M32.3182 0L48.1385 15.5691L32.3182 31.1382L30.2139 29L42.3373 17.0691H0V14.0691H42.3373L30.2139 2.13823L32.3182 0Z"
-                />
-              </svg>
-            </div>
-          </NuxtLink>
+          <PostItem :article="article" />
         </li>
       </ul>
 
-      <a class="width-1/12 heading3" href="/projects"
-        >Explore more projects
+      <a class="width-3/10 heading6 moreProjects lineHover" href="/projects"
+        >Explore projects
         <svg
           width="49"
           height="32"
@@ -133,43 +185,91 @@
   </main>
 </template>
 
-<script>
-export default {
-  async asyncData({ $content, params }) {
-    const articles = await $content("articles", params.slug)
-      .limit(3)
-      .only(["title", "description", "img", "slug"])
-      .sortBy("createdAt", "asc")
-      .fetch();
+<style lang="scss" scoped>
+.homePage {
+  &__projects {
+    .titleSide {
+      grid-column: span 2;
 
-    return {
-      articles,
-    };
-  },
-  head() {
-    return {
-      title: "Portfolio | Sam",
-      meta: [
-        {
-          hid: "description",
-          name: "description",
-          content:
-            "Hey, I’m Sam. I’m a Front end Developer currently studying Communication and multimedia design in Amsterdam. Apart from Front end development, I am also intrested things like game development, programming, and 3D modeling",
-        },
-        {
-          hid: "ogtitle",
-          property: "og:title",
-          content: "Home page",
-        },
-      ],
-      script: [
-        {
-          src: "/js/parallaxBlobs.js",
-          body: true,
-          defer: true,
-        },
-      ],
-    };
-  },
-};
-</script>
+      @media screen and (min-width: 48rem) {
+        grid-column: 1;
+        writing-mode: vertical-rl;
+        text-orientation: mixed;
+      }
+
+      @media screen and (min-width: 64rem) {
+        grid-column: 2;
+      }
+    }
+
+    .moreProjects {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      margin-left: auto;
+    }
+  }
+
+  &__about {
+    h1 {
+      width: clamp(12ch, 100%, 32ch);
+    }
+  }
+
+  &__about2 {
+    margin-bottom: 4.375rem;
+
+    @media screen and (min-width: 48rem) {
+      margin-bottom: 5.2rem;
+    }
+  }
+}
+
+.homePage__about {
+  span {
+    display: inline-block;
+  }
+
+  .mask {
+    overflow: hidden;
+
+    &:nth-child(n + 2) span {
+      transform: translateY(3em);
+
+      animation: dropIn 1s ease forwards;
+      animation-delay: calc(var(--order) * 100ms);
+
+      @media (prefers-reduced-motion) {
+        animation-delay: 0s;
+      }
+    }
+  }
+}
+
+.highlighted {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto;
+  row-gap: 1.5rem;
+
+  margin-bottom: 1.6rem;
+
+  @media screen and (min-width: 48rem) {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.projects__item {
+  overflow: hidden;
+}
+
+@keyframes dropIn {
+  from {
+    transform: translateY(3em);
+  }
+  to {
+    transform: translateY(0);
+  }
+}
+</style>

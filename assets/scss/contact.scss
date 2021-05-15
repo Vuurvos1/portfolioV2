@@ -3,21 +3,18 @@
 
   h1,
   h2 {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 
   .contactPage__form {
     margin-bottom: 2rem;
 
     #submitbutton {
-      display: block;
       margin-left: auto;
     }
   }
 
   .contactPage__social {
-    margin-bottom: 2rem;
-
     ul {
       display: flex;
       flex-direction: row;
@@ -25,16 +22,26 @@
 
       flex-wrap: wrap;
 
+      margin-bottom: 3rem;
+
       li {
         font-size: 0;
-        margin: 0 1rem 1rem 1rem;
+        margin: 0 1rem;
+
+        &:first-child {
+          margin-left: 0;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
 
         svg {
-          width: 5rem;
+          width: 3.2rem;
           height: auto;
-          fill: var(--black);
+          fill: var(--text);
 
-          transition: all .2s ease-out;
+          transition: all 0.2s ease-out;
         }
 
         a {
@@ -50,7 +57,7 @@
 
       &:hover {
         a:focus svg {
-          fill: var(--black);
+          fill: var(--text);
         }
 
         a:hover svg {
@@ -62,25 +69,13 @@
 }
 
 /* Tablet */
-@media screen and (min-width: 48rem) {}
+@media screen and (min-width: 48rem) {
+  h1,
+  h2 {
+    font-size: 3.75rem;
+  }
+}
 
 /* Desktop */
 @media screen and (min-width: 64rem) {
-  .contactPage {
-    &__form {
-
-      h1,
-      h2 {
-        text-align: center;
-      }
-    }
-
-    &__social {
-
-      h1,
-      h2 {
-        text-align: center;
-      }
-    }
-  }
 }

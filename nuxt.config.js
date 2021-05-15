@@ -3,7 +3,7 @@ export default {
    ** Nuxt rendering mode
    ** See https://nuxtjs.org/api/configuration-mode
    */
-  mode: "universal",
+  // mode: "universal",
 
   render: { resourceHints: false },
   /*
@@ -50,15 +50,11 @@ export default {
       },
       { rel: "manifest", href: "/site.webmanifest" },
 
+      { rel: "preconnect", href: "https://fonts.gstatic.com" },
       {
-        rel: "styleSheet",
+        rel: "syltesheet",
         href:
-          "https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap",
-      },
-      {
-        rel: "styleSheet",
-        href:
-          "https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500&display=swap",
+          "https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700&display=swap",
       },
     ],
   },

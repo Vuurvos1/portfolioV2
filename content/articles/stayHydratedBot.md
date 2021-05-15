@@ -4,6 +4,7 @@ description: De Twitch chat bot die je helpt met genoeg drinken
 img: /img/stayHydratedBot.png
 alt: Stay hydrated bot
 link: stayHydratedBot
+createdAt: 2020-08-16T00:00:00+0000
 ---
 
 # Stay hydrated bot
@@ -16,4 +17,6 @@ Why 120 mL you may ask, well do I have an answer for you. Assuming the average h
 
 The chat bot is made using Node js and the Twitch api and can be easily hosted on a Raspberry Pi for example (which is what I did).
 
-<a href="https://github.com/Vuurvos1/stayhydratedTwitchBot" class="button button--code">Code</a>
+<icon-link href="https://github.com/Vuurvos1/stayHydratedFox" target="_blank" icon="github">
+Source code
+</icon-link>

@@ -4,29 +4,43 @@ description: Dating app project
 img: /img/mealMatch.png
 alt: Meal Match
 link: mealMatch
+createdAt: 2020-06-22T00:00:00+0000
 ---
 
 # Meal Match
 
-Meal match is a dating app meant for people who are looking to get into some more serious dating focussing on dinner dates. It is just like first dates, with the only difference that you have to do the organizing yourself. You are able to find people with the same interest and when you match you can start planning your first date while having a blast by sending funny gifs.
-
-The app contains the following features:
-
-- Register/login
-- Liking, disliking and mega liking other people
-- Chatting with your matches (and sending gifs)
-- A fill in form for after the date
-
-And is build using:
-
-- NodeJS
-- EJS
-- MongoDB
-- NPM packages
-
-<!-- Screenshots -->
-
 ![Screenshot form the homepage of the Meal Match app](/img/mealMatch/mealMatchLogin.png)
 
-<a href="https://moffelmatch.herokuapp.com/" class="button button--live">Live</a>
-<a href="https://github.com/vuurvos1/projecttechgroup" class="button button--code">Code</a>
+Meal match is a dating app meant for people who are looking to get into some more serious dating focusing on dinner dates. It is just like first dates, with the only difference that you have to do the organizing yourself.
+
+You can find people with the same interest and when you match you can start planning your first date while having a blast by sending funny gifs.
+
+## My role
+
+During this project, I was tasked to guide the team. Having a tiny bit more technical experience than the rest of the other team members. I set up the project on GitHub and helped the team with technical problems.
+This was my first group project where I really to know the git workflow where you create issues, pull request, review and merge code.
+
+## App features:
+
+- Register / Login
+- Liking / disliking other people
+- Chatting with your matches (and sending gifs)
+- A fill-in form for after the date
+
+## Tech stack:
+
+- Node.js
+- Socket.io
+- EJS
+- MongoDB
+- Heroku
+
+For more detailed documentation about the project you can check out the project [wiki](https://github.com/Vuurvos1/projectTechGroup/wiki)
+
+<icon-link href="https://github.com/vuurvos1/projecttechgroup" target="_blank" icon="github">
+Source code
+</icon-link>
+
+<icon-link href="https://moffelmatch.herokuapp.com" target="_blank" icon="launch">
+See it live
+</icon-link>

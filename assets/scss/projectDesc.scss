@@ -1,79 +1,130 @@
 .projectDesc {
+  // margin-left: auto;
+  // margin-right: auto;
+
+  // max-width: 46rem;
+
+  margin-bottom: 4rem;
+  grid-template-rows: min-content;
+
   article {
-    padding-top: 4rem;
-    margin: 0 auto;
-    max-width: 100rem;
+    .nuxt-content {
+      p:nth-child(2) img {
+        margin-top: 0;
+      }
+    }
+
+    p {
+      margin-bottom: 1.6ch;
+
+      // max-width: clamp(45ch, 100%, 75ch);
+      // max-width: 46rem;
+      margin-left: auto;
+      margin-right: auto;
+
+      line-height: 1.4;
+
+      &:last-of-type {
+        margin-bottom: 2ch;
+      }
+    }
 
     h1,
     h2,
     h3,
     h4,
     h5 {
-      max-width: 30rem;
-      margin: 0 auto .8em auto;
-      padding: 0 .4rem;
+      margin-bottom: 1ch;
+
+      // max-width: clamp(45ch, 100%, 75ch);
+      max-width: 46rem;
     }
 
-    p {
-      max-width: 30rem;
-      margin: 0 auto 1em auto;
-      padding: 0 .4rem;
-
-      a {
-        display: initial;
-      }
+    h2,
+    h3,
+    h4,
+    h5 {
+      margin-top: 1.8ch;
     }
 
-    a.button {
-      display: inline-block;
+    h1 {
+      font-size: 3.75rem;
+      font-weight: 600;
     }
 
-    ul {
-      max-width: 30rem;
-      margin: 0 auto .8em auto;
-      padding: 0 .4rem;
+    h2 {
+      font-size: 2.125rem;
+      font-weight: 600;
     }
 
-    li {
-      list-style: inside;
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 700;
+    }
+
+    h4 {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    h5 {
+      font-size: 1rem;
+      font-weight: 700;
     }
 
     img {
       width: 100%;
       height: auto;
-      margin-bottom: 1rem;
+
+      margin-bottom: 1.2rem;
+      margin-top: 1.2rem;
     }
 
-    .projects--grid {
-      margin-top: 2.6rem;
-
-      li {
-        list-style: none;
-        margin-bottom: 1rem;
-      }
-    }
-  }
-}
-
-/* Tablet */
-@media screen and (min-width: 48rem) {
-  .projectDesc article {
-    img {
-      width: 140%;
-      margin-left: -20%;
+    // list styles
+    ul,
+    ol {
+      margin-bottom: 2ch;
+      margin-left: 1.4rem;
     }
 
-    p {
-      max-width: 30rem;
-    }
+    // anchor styles
 
-    ul.projects--grid {
-      max-width: 50rem;
+    // quote styles
 
-      img {
-        width: 100%;
-        margin-left: 0;
-      }
+    // special grids?
+
+    .iconLink {
+      margin-right: 1rem;
     }
   }
 }
+
+//     p a {
+//       display: initial;
+//     }
+
+//     a.button {
+//       display: inline-block;
+//     }
+
+//     .projects--grid {
+//       margin-top: 2.6rem;
+
+//       li {
+//         list-style: none;
+//         margin-bottom: 1rem;
+//       }
+//     }
+//   }
+// }
+
+// /* Tablet */
+// @media screen and (min-width: 48rem) {
+//     ul.projects--grid {
+//       img {
+//         width: 100%;
+//         margin-left: 0;
+//       }
+//     }
+//   }
+// }
