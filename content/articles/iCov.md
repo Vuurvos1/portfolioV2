@@ -15,6 +15,8 @@ iCov (infobox for Crimineel en Onverklaarbaar Vermogen) has a partnership with v
 
 So in commission for iCov we wanted to make sure that partners can analyze the relationship scan with as little time and effort as possible. This means we have to look at how to make the current solution better or think of something new. The new solution must be user-friendly and interactive.
 
+<tech-stack tech="nodejs,svelte,surge"></tech-stack>
+
 My role in this project was the creation of the website and concepting part of the functionality inside of the app.
 
 <icon-link href="https://github.com/vuurvos1/icov" target="_blank" icon="github">Source code</icon-link>

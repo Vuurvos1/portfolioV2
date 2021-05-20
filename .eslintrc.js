@@ -16,7 +16,7 @@ module.exports = {
     "plugin:vue/recommended",
     "plugin:prettier/recommended",
     "prettier/vue",
-    "eslint:recommended",
+    // "eslint:recommended",
   ],
 
   plugins: [],
@@ -32,5 +32,7 @@ module.exports = {
     "require-jsdoc": 0,
 
     "vue/component-name-in-template-casing": ["error", "PascalCase"],
+
+    "prettier/prettier": ["error", { endOfLine: "auto" }],
   },
 };
