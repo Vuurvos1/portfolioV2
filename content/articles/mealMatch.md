@@ -27,15 +27,15 @@ This was my first group project where I really to know the git workflow where yo
 - Chatting with your matches (and sending gifs)
 - A fill-in form for after the date
 
-## Tech stack:
-
-- Node.js
+<!-- - Node.js
 - Socket.io
 - EJS
 - MongoDB
-- Heroku
+- Heroku -->
 
-For more detailed documentation about the project you can check out the project [wiki](https://github.com/Vuurvos1/projectTechGroup/wiki)
+<tech-stack tech="mongodb,nodejs,heroku"></tech-stack>
+
+For more detailed documentation you can check out the GitHub projects [wiki](https://github.com/Vuurvos1/projectTechGroup/wiki)
 
 <icon-link href="https://github.com/vuurvos1/projecttechgroup" target="_blank" icon="github">
 Source code

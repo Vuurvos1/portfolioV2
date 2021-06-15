@@ -40,6 +40,10 @@
       max-width: 46rem;
     }
 
+    h1 {
+      margin-top: 0.2ch;
+    }
+
     h2,
     h3,
     h4,
@@ -85,6 +89,14 @@
     ol {
       margin-bottom: 2ch;
       margin-left: 1.4rem;
+
+      li {
+        font-size: 1.125rem;
+      }
+    }
+
+    p a {
+      text-decoration: underline;
     }
 
     // anchor styles

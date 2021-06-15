@@ -39,6 +39,16 @@ export default {
           property: "keywords",
           content: this.article.keywords ? this.article.keywords : "",
         },
+        {
+          hid: "robots",
+          name: "robots",
+          content: "index, follow",
+        },
+        {
+          hid: "googlebot",
+          name: "googlebot",
+          content: "index, follow",
+        },
       ],
     };
   },

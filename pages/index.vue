@@ -49,6 +49,16 @@ export default {
           property: "og:url",
           content: "http://schelpkikker.nl/",
         },
+        {
+          hid: "robots",
+          name: "robots",
+          content: "index, follow",
+        },
+        {
+          hid: "googlebot",
+          name: "googlebot",
+          content: "index, follow",
+        },
       ],
       script: [
         {
@@ -213,7 +223,11 @@ export default {
 
   &__about {
     h1 {
-      width: clamp(12ch, 100%, 32ch);
+      max-width: 32ch;
+
+      span {
+        font-size: unquote("clamp(2.5rem, 1.5625rem + 4.1667vw, 3.75rem)");
+      }
     }
   }
 

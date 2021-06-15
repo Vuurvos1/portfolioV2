@@ -14,6 +14,3 @@ Party Pickle is one of my first JavaScrip projects. Created as the final assignm
 You can feed your pickle, give him a drink or poke him so your pickle doesn't get mouldy. You can also bully your pickle by smashing the jar till it breaks.
 
 <party-pickle></party-pickle>
-
-<!-- move this to pickle component -->
-<!-- <script src="/js/partyPickle.js" defer></script> -->
