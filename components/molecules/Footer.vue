@@ -2,13 +2,27 @@
   <footer class="grid">
     <div class="width-3/10">
       <p class="body2">
-        <a href="https://github.com/vuurvos1">GitHub</a> /
-        <a href="https://codepen.io/Vuurvos">Codepen</a> /
-        <a href="https://www.linkedin.com/in/sam-de-kanter-b3020b1a0/"
+        <a class="lineHover" target="social" href="https://github.com/vuurvos1"
+          >GitHub</a
+        >
+        /
+        <a class="lineHover" target="social" href="https://codepen.io/Vuurvos"
+          >Codepen</a
+        >
+        /
+        <a
+          class="lineHover"
+          target="social"
+          href="https://www.linkedin.com/in/sam-de-kanter-b3020b1a0/"
           >LinkedIn</a
         >
         /
-        <a href="https://cssbattle.dev/player/vuurvos">CSS Battle</a>
+        <a
+          class="lineHover"
+          target="social"
+          href="https://cssbattle.dev/player/vuurvos"
+          >CSS Battle</a
+        >
       </p>
       <p class="body2">&copy; 2021 - Sam de Kanter</p>
     </div>
@@ -32,6 +46,10 @@ footer {
 
       &:first-child {
         margin-bottom: 0.75rem;
+      }
+
+      a {
+        display: inline-flex;
       }
     }
 

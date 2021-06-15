@@ -76,6 +76,16 @@ export default {
           property: "keywords",
           content: "Contact, mail",
         },
+        {
+          hid: "robots",
+          name: "robots",
+          content: "index, follow",
+        },
+        {
+          hid: "googlebot",
+          name: "googlebot",
+          content: "index, follow",
+        },
       ],
     };
   },

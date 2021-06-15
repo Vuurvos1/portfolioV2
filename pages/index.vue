@@ -49,6 +49,16 @@ export default {
           property: "og:url",
           content: "http://schelpkikker.nl/",
         },
+        {
+          hid: "robots",
+          name: "robots",
+          content: "index, follow",
+        },
+        {
+          hid: "googlebot",
+          name: "googlebot",
+          content: "index, follow",
+        },
       ],
       script: [
         {

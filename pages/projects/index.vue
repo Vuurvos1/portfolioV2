@@ -49,6 +49,16 @@ export default {
           property: "keywords",
           content: "Projects",
         },
+        {
+          hid: "robots",
+          name: "robots",
+          content: "index, follow",
+        },
+        {
+          hid: "googlebot",
+          name: "googlebot",
+          content: "index, follow",
+        },
       ],
     };
   },
