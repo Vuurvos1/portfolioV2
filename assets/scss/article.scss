@@ -108,6 +108,17 @@
     .iconLink {
       margin-right: 1rem;
     }
+
+    .nodegrid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+
+      img {
+        margin: 0;
+        width: 100%;
+        aspect-ratio: 1 / 1;
+      }
+    }
   }
 }
 
