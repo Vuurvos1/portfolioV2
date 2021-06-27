@@ -1,5 +1,5 @@
 ---
-title: Nodevember 2020
+title: Nodevember
 description: Dating app project
 img: /img/nodevember2020/glitch.png
 alt: Nodevember 2020
@@ -9,9 +9,8 @@ createdAt: 2020-12-01T00:00:00+0000
 
 # Node&shy;vember
 
-Nodevember is all about procedural awesomeness!
-Challenge yourself to improve and show off your procedural skills.
-Anything procedural is welcome. If you can call it nodes, you can call it Nodevember!
+Nodevember is all about procedural awesomeness and challenging yourself to improve your procedural skills. Every day of the month there is a new theme to make a render for. For all renders no external data/images were used, only nodes and math.
+I chose to use blender 2.8x to make my renders since the node editor is very powerful and flexible.
 
 <div class="nodegrid">
   <img src="/img/nodevember2020/cookie.png" alt="Chocolate chip cookie">
@@ -37,8 +36,4 @@ Anything procedural is welcome. If you can call it nodes, you can call it Nodeve
   <img src="/img/nodevember2020/illusion.png" alt="Spinning circles optical illusion">
 </div>
 
-<!--
-<icon-link href="https://moffelmatch.herokuapp.com" target="_blank" icon="launch">
-See it live
-</icon-link>
--->
+If you want to poke around the blender files, you can. Download them from [Gumroad](https://gumroad.com/vuurvos) for free.
